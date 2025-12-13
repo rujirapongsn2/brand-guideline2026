@@ -958,21 +958,6 @@
         <h2 class="section-title">Color Palette</h2>
         <p class="section-subtitle">สีหลักและสีรองที่สะท้อนความเป็น Softnix</p>
 
-        <div class="color-rationale"
-            style="background: linear-gradient(180deg, #2786C2 0%, #FDC70C 50%, #A9CB2E 100%); padding: 30px; border-radius: 12px; margin-bottom: 30px; color: white;">
-            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; margin-bottom: 15px; color: white;">
-                🎨 Color Palette Design Rationale</h3>
-            <p style="font-family: 'Sarabun', sans-serif; font-size: 1rem; line-height: 1.6; margin-bottom: 15px;">
-                The Softnix color palette is inspired by the logo's gradient design, which features a vertical color progression from bottom to top:</p>
-            <ul style="font-family: 'Sarabun', sans-serif; font-size: 1rem; line-height: 1.6; padding-left: 20px; margin-bottom: 15px;">
-                <li><strong style="color: #F8F9FA;">Bottom (Blue - #2786C2)</strong>: Represents stability, trustworthiness, and reliability - perfect for Layer 1 products that form the foundation of data infrastructure</li>
-                <li><strong style="color: #F8F9FA;">Middle (Yellow - #FDC70C)</strong>: Symbolizes sustainability, value, and practical benefits - aligning with Layer 2's AI infrastructure</li>
-                <li><strong style="color: #F8F9FA;">Top (Lime - #A9CB2E)</strong>: Embodies diversity, innovation, and technological advancement - matching Layer 3's intelligent applications</li>
-            </ul>
-            <p style="font-family: 'Sarabun', sans-serif; font-size: 1rem; line-height: 1.6;">
-                This color progression reflects Softnix's 3-layer value stack, creating a visual metaphor for the company's comprehensive AI infrastructure approach.</p>
-        </div>
-
         <h3
             style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin-bottom: 20px; color: var(--dark-navy);">
             Primary Colors — สีหลัก</h3>
@@ -1978,78 +1963,679 @@
         </div>
     </section>
 
-    <!-- Designer Quick Reference -->
-    <section id="designer-reference" class="section">
-        <h2 class="section-title">Designer Quick Reference</h2>
-        <p class="section-subtitle">คู่มือสำหรับนักออกแบบ</p>
+        <!-- Designer Quick Reference -->
+        <h3 id="designer-reference"
+            style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin: 50px 0 25px; color: var(--dark-navy);">
+            Designer Quick Reference — คู่มือสำหรับนักออกแบบ</h3>
+        <p style="color: var(--slate); margin-bottom: 30px;">ค่าและโค้ดที่พร้อมใช้งานสำหรับการออกแบบ Slide ใน
+            PowerPoint, Keynote หรือ Figma</p>
 
-        <!-- Preview Section -->
-        <p style="color: var(--slate); margin-bottom: 30px; line-height: 1.8; font-size: 1rem;">
-            คู่มืออ้างอิงด่วนสำหรับนักออกแบบ รวมค่าและโค้ดที่พร้อมใช้งานสำหรับการออกแบบ Slide ใน PowerPoint, Keynote หรือ Figma ครอบคลุม Slide Dimensions, Color Codes พร้อม Copy Button, Gradient Presets, Font Settings, Logo Placement Guidelines และ PowerPoint Quick Setup ที่ช่วยให้คุณเริ่มต้นได้อย่างรวดเร็ว
-        </p>
-
-        <!-- Preview Quick Reference Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px;">
-
-            <!-- Slide Dimensions Preview -->
-            <div style="background: white; border-radius: 16px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <div style="font-size: 1.5rem; margin-bottom: 15px;">📐</div>
-                <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--dark-navy); margin-bottom: 12px; font-weight: 600;">Slide Dimensions</h4>
-                <div style="background: var(--off-white); border-radius: 8px; padding: 15px; margin-bottom: 10px;">
-                    <div style="font-weight: 600; color: var(--dark-navy); font-size: 0.9rem; margin-bottom: 8px;">Standard 16:9</div>
-                    <div style="font-family: monospace; font-size: 0.85rem; color: var(--slate);">1920 × 1080 px</div>
+        <!-- Slide Dimensions -->
+        <div
+            style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4
+                style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                📐 Slide Dimensions — ขนาด Slide</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 10px;">Standard (16:9)</div>
+                    <div style="font-family: monospace; font-size: 0.9rem; color: var(--slate); line-height: 1.8;">
+                        <div>PowerPoint: <strong>13.33" × 7.5"</strong></div>
+                        <div>Pixels: <strong>1920 × 1080 px</strong></div>
+                        <div>Points: <strong>960 × 540 pt</strong></div>
+                    </div>
                 </div>
-                <p style="font-size: 0.85rem; color: var(--slate);">ขนาดมาตรฐานและ Safe Margins</p>
-            </div>
-
-            <!-- Color Codes Preview -->
-            <div style="background: white; border-radius: 16px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <div style="font-size: 1.5rem; margin-bottom: 15px;">🎨</div>
-                <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--dark-navy); margin-bottom: 12px; font-weight: 600;">Color Codes</h4>
-                <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-                    <div style="width: 40px; height: 40px; background: #F3903F; border-radius: 6px;"></div>
-                    <div style="width: 40px; height: 40px; background: #FDC70C; border-radius: 6px;"></div>
-                    <div style="width: 40px; height: 40px; background: #A9CB2E; border-radius: 6px;"></div>
-                    <div style="width: 40px; height: 40px; background: #2786C2; border-radius: 6px;"></div>
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 10px;">Widescreen (16:10)
+                    </div>
+                    <div style="font-family: monospace; font-size: 0.9rem; color: var(--slate); line-height: 1.8;">
+                        <div>PowerPoint: <strong>13.33" × 8.33"</strong></div>
+                        <div>Pixels: <strong>1920 × 1200 px</strong></div>
+                        <div>Points: <strong>960 × 600 pt</strong></div>
+                    </div>
                 </div>
-                <p style="font-size: 0.85rem; color: var(--slate);">HEX, RGB, HSL พร้อม Copy Button</p>
-            </div>
-
-            <!-- Typography Preview -->
-            <div style="background: white; border-radius: 16px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <div style="font-size: 1.5rem; margin-bottom: 15px;">🔤</div>
-                <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--dark-navy); margin-bottom: 12px; font-weight: 600;">Typography</h4>
-                <div style="margin-bottom: 10px;">
-                    <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--dark-navy);">Poppins</div>
-                    <div style="font-family: 'Sarabun', sans-serif; font-size: 1rem; color: var(--slate); margin-top: 5px;">Sarabun สำหรับภาษาไทย</div>
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 10px;">Safe Margins</div>
+                    <div style="font-family: monospace; font-size: 0.9rem; color: var(--slate); line-height: 1.8;">
+                        <div>Top/Bottom: <strong>0.5" (48px)</strong></div>
+                        <div>Left/Right: <strong>0.75" (72px)</strong></div>
+                        <div>Logo Area: <strong>มุมล่างขวา</strong></div>
+                    </div>
                 </div>
-                <p style="font-size: 0.85rem; color: var(--slate);">Font families, sizes และ line heights</p>
             </div>
-
-            <!-- PowerPoint Setup Preview -->
-            <div style="background: linear-gradient(135deg, #0D1B2A, #1B263B); border-radius: 16px; padding: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); color: white;">
-                <div style="font-size: 1.5rem; margin-bottom: 15px;">⚡</div>
-                <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin-bottom: 12px; font-weight: 600;">PowerPoint Setup</h4>
-                <div style="font-size: 0.85rem; opacity: 0.9; line-height: 1.6;">
-                    <div>1. Slide Size (16:9)</div>
-                    <div>2. Theme Colors</div>
-                    <div>3. Theme Fonts</div>
-                    <div>4. Logo Placement</div>
-                </div>
-                <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">คำแนะนำทีละขั้นตอน</p>
-            </div>
-
         </div>
 
-        <!-- See More Button -->
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="designer-reference.html" style="display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, var(--dark-navy), #1B263B); color: white; padding: 18px 35px; border-radius: 12px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1rem; box-shadow: 0 8px 30px rgba(13, 27, 42, 0.3); transition: all 0.3s ease;">
-                <span style="background: linear-gradient(90deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Designer Quick Reference</span>
-                <span style="font-size: 1.2rem;">→</span>
-            </a>
-            <p style="margin-top: 15px; color: var(--slate); font-size: 0.9rem;">
-                ดูรายละเอียด Color Codes, Typography, Dimensions, Gradient Presets และ Guidelines เพิ่มเติม
-            </p>
+        <!-- Color Codes for Designers -->
+        <div
+            style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4
+                style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                🎨 Color Codes — รหัสสีสำหรับ Copy</h4>
+
+            <!-- Background Colors -->
+            <div style="margin-bottom: 25px;">
+                <h5 style="font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">Background Colors</h5>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div style="background: #0D1B2A; border-radius: 10px; padding: 20px; color: white;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Dark Navy</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; opacity: 0.9;">
+                            HEX: #0D1B2A<br>
+                            RGB: 13, 27, 42<br>
+                            HSL: 213°, 53%, 11%
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('#0D1B2A')"
+                            style="margin-top: 10px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Copy
+                            HEX</button>
+                    </div>
+                    <div style="background: #1B263B; border-radius: 10px; padding: 20px; color: white;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Charcoal</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; opacity: 0.9;">
+                            HEX: #1B263B<br>
+                            RGB: 27, 38, 59<br>
+                            HSL: 219°, 37%, 17%
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('#1B263B')"
+                            style="margin-top: 10px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Copy
+                            HEX</button>
+                    </div>
+                    <div
+                        style="background: #F8F9FA; border-radius: 10px; padding: 20px; color: #0D1B2A; border: 1px solid #e0e0e0;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Off White</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; color: var(--slate);">
+                            HEX: #F8F9FA<br>
+                            RGB: 248, 249, 250<br>
+                            HSL: 210°, 17%, 98%
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('#F8F9FA')"
+                            style="margin-top: 10px; background: #e8e8e8; border: none; color: #333; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Copy
+                            HEX</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accent Colors -->
+            <div style="margin-bottom: 25px;">
+                <h5 style="font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">Accent Colors (สำหรับ
+                    Highlight, Bullet, Border)</h5>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                    <div
+                        style="background: #F3903F; border-radius: 10px; padding: 15px; color: white; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Orange</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#F3903F</div>
+                        <div style="font-size: 0.75rem; opacity: 0.9;">RGB: 243, 144, 63</div>
+                    </div>
+                    <div
+                        style="background: #FDC70C; border-radius: 10px; padding: 15px; color: #0D1B2A; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Yellow</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#FDC70C</div>
+                        <div style="font-size: 0.75rem;">RGB: 253, 199, 12</div>
+                    </div>
+                    <div
+                        style="background: #A9CB2E; border-radius: 10px; padding: 15px; color: #0D1B2A; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Lime</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#A9CB2E</div>
+                        <div style="font-size: 0.75rem;">RGB: 169, 203, 46</div>
+                    </div>
+                    <div
+                        style="background: #2786C2; border-radius: 10px; padding: 15px; color: white; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Blue</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#2786C2</div>
+                        <div style="font-size: 0.75rem; opacity: 0.9;">RGB: 39, 134, 194</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Colors -->
+            <div>
+                <h5 style="font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">Text Colors</h5>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: var(--off-white);">
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Element
+                                </th>
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Dark
+                                    Theme</th>
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Light
+                                    Theme</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Title Text
+                                </td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">
+                                    #FFFFFF</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">
+                                    #0D1B2A</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Body Text
+                                </td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">
+                                    #E8E8E8 หรือ #F8F9FA</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">
+                                    #1B263B หรือ #415A77</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Subtitle /
+                                    Caption</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">
+                                    #778DA9</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">
+                                    #778DA9</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; font-weight: 500;">Accent Text (Link, Highlight)</td>
+                                <td style="padding: 12px; font-family: monospace;">#F3903F หรือ Brand Color</td>
+                                <td style="padding: 12px; font-family: monospace;">#2786C2 หรือ Brand Color</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gradient Codes -->
+        <div
+            style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4
+                style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                🌈 Gradient Presets — ค่า Gradient พร้อมใช้</h4>
+
+            <div style="display: grid; gap: 20px;">
+                <!-- Sunrise Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div
+                            style="width: 120px; height: 60px; background: linear-gradient(90deg, #F3903F, #FDC70C); border-radius: 8px;">
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Sunrise Gradient
+                            </div>
+                            <div
+                                style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(90deg, #F3903F 0%, #FDC70C 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>PowerPoint:</strong> Gradient Fill → Type: Linear → Angle: 0° → Stop 1: #F3903F
+                                → Stop 2: #FDC70C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nature Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div
+                            style="width: 120px; height: 60px; background: linear-gradient(90deg, #A9CB2E, #2786C2); border-radius: 8px;">
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Nature Gradient
+                            </div>
+                            <div
+                                style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(90deg, #A9CB2E 0%, #2786C2 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>PowerPoint:</strong> Gradient Fill → Type: Linear → Angle: 0° → Stop 1: #A9CB2E
+                                → Stop 2: #2786C2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Brand Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div
+                            style="width: 120px; height: 60px; background: linear-gradient(90deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); border-radius: 8px;">
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Full Brand
+                                Gradient (4 สี)</div>
+                            <div
+                                style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(90deg, #F3903F 0%, #FDC70C 33%, #A9CB2E 66%, #2786C2 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>PowerPoint:</strong> Gradient Fill → Type: Linear → Angle: 0° → 4 Stops ตามลำดับ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Bar Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div
+                            style="width: 8px; height: 60px; background: linear-gradient(180deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); border-radius: 4px;">
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Accent Bar
+                                (แนวตั้ง)</div>
+                            <div
+                                style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(180deg, #F3903F 0%, #FDC70C 33%, #A9CB2E 66%, #2786C2 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>ใช้สำหรับ:</strong> Accent bar ด้านข้าง Slide, Border ของ Card, Divider line
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Font Settings -->
+        <div
+            style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4
+                style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                🔤 Font Settings — การตั้งค่า Font</h4>
+
+            <div
+                style="background: linear-gradient(135deg, rgba(243,144,63,0.1), rgba(243,144,63,0.05)); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #F3903F;">
+                <h5 style="font-size: 0.95rem; color: var(--dark-navy); margin-bottom: 10px;">📥 Download Fonts</h5>
+                <ul style="color: var(--slate); font-size: 0.9rem; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Poppins:</strong> <a href="https://fonts.google.com/specimen/Poppins" target="_blank"
+                            style="color: #2786C2;">Google Fonts - Poppins</a> (สำหรับ Heading)</li>
+                    <li><strong>Sarabun:</strong> <a href="https://fonts.google.com/specimen/Sarabun" target="_blank"
+                            style="color: #2786C2;">Google Fonts - Sarabun</a> (สำหรับ Body Text ภาษาไทย)</li>
+                </ul>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background: var(--off-white);">
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Element</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Font Family
+                            </th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Size (pt)
+                            </th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Weight</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Line Height
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Main Title</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">44 - 60 pt
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Bold (700)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Section Title
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">36 - 44 pt
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">SemiBold (600)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Slide Title</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">28 - 36 pt
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">SemiBold (600)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.3</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Subtitle</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">20 - 24 pt
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Medium (500)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.4</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Body Text</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Sarabun</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">18 - 22 pt
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Regular (400)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.5</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Bullet Points
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Sarabun</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">16 - 20 pt
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Regular (400)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.6</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; font-weight: 500;">Caption / Footer</td>
+                            <td style="padding: 12px;">Sarabun</td>
+                            <td style="padding: 12px; font-family: monospace;">12 - 14 pt</td>
+                            <td style="padding: 12px;">Regular (400)</td>
+                            <td style="padding: 12px;">1.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Logo Placement -->
+        <div
+            style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4
+                style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                📍 Logo Placement — ตำแหน่งโลโก้</h4>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <!-- Title Slide Logo -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 15px;">Title Slide</div>
+                    <div
+                        style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
+                        <div style="border: 2px dashed #F3903F; border-radius: 8px; padding: 10px 20px;">
+                            <img src="Logo Softnix White.png" alt="Logo" style="height: 25px; width: auto;">
+                        </div>
+                        <div style="font-size: 0.6rem; color: #778DA9; margin-top: 8px;">ตรงกลาง ด้านบน</div>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--slate); margin-top: 12px;">
+                        <strong>ขนาด:</strong> Height 60-80px<br>
+                        <strong>ตำแหน่ง:</strong> Center, ห่างจากขอบบน 15%
+                    </div>
+                </div>
+
+                <!-- Content Slide Logo -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 15px;">Content Slide</div>
+                    <div
+                        style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column; position: relative;">
+                        <div style="flex: 1;"></div>
+                        <div style="display: flex; justify-content: flex-end;">
+                            <div style="border: 2px dashed #F3903F; border-radius: 6px; padding: 5px 10px;">
+                                <img src="Logo Softnix White.png" alt="Logo" style="height: 15px; width: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--slate); margin-top: 12px;">
+                        <strong>ขนาด:</strong> Height 30-40px<br>
+                        <strong>ตำแหน่ง:</strong> มุมล่างขวา, ห่างจากขอบ 0.5"
+                    </div>
+                </div>
+
+                <!-- Logo Files -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 15px;">Logo Files</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div
+                            style="background: #0D1B2A; border-radius: 8px; padding: 15px; display: flex; align-items: center; gap: 12px;">
+                            <img src="Logo Softnix White.png" alt="Logo White" style="height: 25px; width: auto;">
+                            <div>
+                                <div style="font-size: 0.8rem; color: white; font-weight: 500;">Dark Background</div>
+                                <div style="font-size: 0.7rem; color: #778DA9; font-family: monospace;">Logo Softnix
+                                    White.png</div>
+                            </div>
+                        </div>
+                        <div
+                            style="background: white; border-radius: 8px; padding: 15px; display: flex; align-items: center; gap: 12px; border: 1px solid #e0e0e0;">
+                            <img src="Logo Softnix.png" alt="Logo" style="height: 25px; width: auto;">
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--dark-navy); font-weight: 500;">Light
+                                    Background</div>
+                                <div style="font-size: 0.7rem; color: var(--slate); font-family: monospace;">Logo
+                                    Softnix.png</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PowerPoint Quick Setup -->
+        <div
+            style="background: linear-gradient(135deg, #0D1B2A, #1B263B); border-radius: 16px; padding: 35px; color: white;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px;">⚡ PowerPoint Quick
+                Setup</h4>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div>
+                    <h5 style="color: #F3903F; font-size: 0.95rem; margin-bottom: 12px;">1. ตั้งค่า Slide Size</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>Design → Slide Size → Widescreen (16:9)</li>
+                        <li>หรือ Custom: 13.33" × 7.5"</li>
+                    </ol>
+                </div>
+                <div>
+                    <h5 style="color: #FDC70C; font-size: 0.95rem; margin-bottom: 12px;">2. ตั้งค่า Theme Colors</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>Design → Variants → Colors → Customize</li>
+                        <li>ใส่ค่า HEX ตาม Brand Colors</li>
+                    </ol>
+                </div>
+                <div>
+                    <h5 style="color: #A9CB2E; font-size: 0.95rem; margin-bottom: 12px;">3. ตั้งค่า Theme Fonts</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>Design → Variants → Fonts → Customize</li>
+                        <li>Heading: Poppins, Body: Sarabun</li>
+                    </ol>
+                </div>
+                <div>
+                    <h5 style="color: #2786C2; font-size: 0.95rem; margin-bottom: 12px;">4. ใส่ Logo ใน Master Slide
+                    </h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>View → Slide Master</li>
+                        <li>Insert → Picture → เลือก Logo ที่เหมาะสม</li>
+                        <li>วางมุมล่างขวา, ปรับขนาด 30-40px</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                <div style="font-weight: 600; margin-bottom: 10px;">💾 Save as Template</div>
+                <div style="font-size: 0.85rem; color: #e8e8e8;">
+                    หลังตั้งค่าเสร็จ ให้บันทึกเป็น Template: <strong>File → Save As → PowerPoint Template
+                        (.potx)</strong><br>
+                    ตั้งชื่อ: <span
+                        style="font-family: monospace; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">Softnix-Brand-Template-2026.potx</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Theme Colors Setup -->
+        <div
+            style="margin-top: 40px; background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <h4
+                style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 10px; color: var(--dark-navy);">
+                📋 อธิบายละเอียด: ตั้งค่า Theme Colors ใน PowerPoint</h4>
+            <p style="color: var(--slate); margin-bottom: 25px; font-size: 0.9rem;">
+                คำแนะนำทีละขั้นตอนสำหรับการตั้งค่าสีธีมใน PowerPoint เพื่อให้ Design ตามแบรนด์ Softnix</p>
+
+            <!-- Step 1 -->
+            <div
+                style="margin-bottom: 30px; padding: 20px; background: rgba(13,27,42,0.04); border-radius: 12px; border-left: 4px solid #2786C2;">
+                <h5 style="font-family: 'Poppins', sans-serif; color: #2786C2; margin-bottom: 12px; font-size: 1rem;">
+                    Step 1: เปิด Design Tab</h5>
+                <div style="color: var(--slate); font-size: 0.9rem; line-height: 1.7;">
+                    <p><strong>เมื่อเปิด PowerPoint ให้:</strong></p>
+                    <ol style="margin-left: 20px;">
+                        <li>คลิกแท็บ <strong>Design</strong> ที่แถบเมนูด้านบน</li>
+                        <li>มองหากลุ่ม <strong>Variants</strong> (อยู่ด้านขวาของ Design tab)</li>
+                        <li>หากยังไม่มี Variants ให้ตรวจสอบว่า PowerPoint version เป็น Office 2013 หรือใหม่กว่า</li>
+                    </ol>
+                    <div
+                        style="margin-top: 12px; padding: 12px; background: rgba(243,144,63,0.1); border-radius: 8px; border-left: 3px solid #F3903F;">
+                        <strong style="color: #F3903F;">💡 Tip:</strong> หากไม่เห็น Design Tab อาจต้องเปิด Slide Master
+                        ก่อน (View → Slide Master)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div
+                style="margin-bottom: 30px; padding: 20px; background: rgba(253,199,12,0.04); border-radius: 12px; border-left: 4px solid #FDC70C;">
+                <h5 style="font-family: 'Poppins', sans-serif; color: #FDC70C; margin-bottom: 12px; font-size: 1rem;">
+                    Step 2: เปิด Colors Customization</h5>
+                <div style="color: var(--slate); font-size: 0.9rem; line-height: 1.7;">
+                    <p><strong>เมื่อเข้า Design Tab ให้:</strong></p>
+                    <ol style="margin-left: 20px;">
+                        <li>ในกลุ่ม <strong>Variants</strong> ให้คลิก <strong>▼</strong> (ลูกศร)
+                            เพื่อแสดงตัวเลือกเพิ่มเติม</li>
+                        <li>เลือก <strong>Colors</strong></li>
+                        <li>ที่ด้านล่างของ Dropdown Colors ให้หา <strong>Customize Colors</strong></li>
+                        <li>คลิก <strong>Customize Colors</strong></li>
+                    </ol>
+                    <div
+                        style="margin-top: 12px; padding: 12px; background: rgba(243,144,63,0.1); border-radius: 8px; border-left: 3px solid #F3903F;">
+                        <strong style="color: #F3903F;">ملاحظة:</strong> หน้าต่าง "Create New Theme Colors" จะปรากฏขึ้น
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div
+                style="margin-bottom: 30px; padding: 20px; background: rgba(169,203,46,0.04); border-radius: 12px; border-left: 4px solid #A9CB2E;">
+                <h5 style="font-family: 'Poppins', sans-serif; color: #A9CB2E; margin-bottom: 12px; font-size: 1rem;">
+                    Step 3: ใส่ค่า Softnix Brand Colors</h5>
+                <div style="color: var(--slate); font-size: 0.9rem; line-height: 1.7;">
+                    <p><strong>ในหน้าต่าง Create New Theme Colors มี Theme Colors 10 ตำแหน่ง ให้ใส่ดังนี้:</strong></p>
+
+                    <!-- Color Table -->
+                    <div style="margin-top: 15px; overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                            <thead>
+                                <tr style="background: #f0f0f0;">
+                                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">ตำแหน่ง</th>
+                                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">ชื่อสี</th>
+                                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">HEX Code</th>
+                                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">วัตถุประสงค์
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: white;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 1</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Dark Navy</td>
+                                    <td
+                                        style="padding: 10px; border: 1px solid #ddd; font-family: monospace; font-weight: 600;">
+                                        <span
+                                            style="background: #0D1B2A; color: white; padding: 2px 6px; border-radius: 3px;">#0D1B2A</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">สีหลัก (Headings, Dark
+                                        backgrounds)</td>
+                                </tr>
+                                <tr style="background: #f9f9f9;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 2</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Softnix Blue</td>
+                                    <td
+                                        style="padding: 10px; border: 1px solid #ddd; font-family: monospace; font-weight: 600;">
+                                        <span
+                                            style="background: #2786C2; color: white; padding: 2px 6px; border-radius: 3px;">#2786C2</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">สี Accent (L1 Data Platform)</td>
+                                </tr>
+                                <tr style="background: white;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 3</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Softnix Orange</td>
+                                    <td
+                                        style="padding: 10px; border: 1px solid #ddd; font-family: monospace; font-weight: 600;">
+                                        <span
+                                            style="background: #F3903F; color: white; padding: 2px 6px; border-radius: 3px;">#F3903F</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">สี Accent (L2 GenAI)</td>
+                                </tr>
+                                <tr style="background: #f9f9f9;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 4</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Softnix Yellow</td>
+                                    <td
+                                        style="padding: 10px; border: 1px solid #ddd; font-family: monospace; font-weight: 600;">
+                                        <span
+                                            style="background: #FDC70C; color: #333; padding: 2px 6px; border-radius: 3px;">#FDC70C</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">สี Accent (L3 AI Agents)</td>
+                                </tr>
+                                <tr style="background: white;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 5</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Softnix Lime</td>
+                                    <td
+                                        style="padding: 10px; border: 1px solid #ddd; font-family: monospace; font-weight: 600;">
+                                        <span
+                                            style="background: #A9CB2E; color: white; padding: 2px 6px; border-radius: 3px;">#A9CB2E</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">สี Accent (L3 AI Agents)</td>
+                                </tr>
+                                <tr style="background: #f9f9f9;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 6</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Light Gray</td>
+                                    <td
+                                        style="padding: 10px; border: 1px solid #ddd; font-family: monospace; font-weight: 600;">
+                                        <span
+                                            style="background: #F8F9FA; color: #333; padding: 2px 6px; border-radius: 3px;">#F8F9FA</span>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Light backgrounds</td>
+                                </tr>
+                                <tr style="background: white;">
+                                    <td style="padding: 10px; border: 1px solid #ddd;"><strong>Theme Color 7-10</strong>
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">ตามต้องการ</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd; font-family: monospace;">ตัวเลือก
+                                    </td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">สีเพิ่มเติมตามต้องการ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div
+                        style="margin-top: 15px; padding: 12px; background: rgba(243,144,63,0.1); border-radius: 8px; border-left: 3px solid #F3903F;">
+                        <strong style="color: #F3903F;">⚠️ สำคัญ:</strong> ป้อน HEX Code ตรงกับสีที่กำหนดเพื่อให้ Design
+                        สอดคล้องกับ Brand Guidelines
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div
+                style="margin-bottom: 30px; padding: 20px; background: rgba(39,134,194,0.04); border-radius: 12px; border-left: 4px solid #2786C2;">
+                <h5 style="font-family: 'Poppins', sans-serif; color: #2786C2; margin-bottom: 12px; font-size: 1rem;">
+                    Step 4: บันทึกและนำไปใช้</h5>
+                <div style="color: var(--slate); font-size: 0.9rem; line-height: 1.7;">
+                    <ol style="margin-left: 20px;">
+                        <li>หลังจากใส่สีทั้งหมดแล้ว ให้คลิก <strong>Save</strong> ที่ด้านล่างของหน้าต่าง</li>
+                        <li>ตั้งชื่อให้ Scheme (เช่น "Softnix Brand 2026")</li>
+                        <li>ระบบจะนำสีมาใช้ใน Slide ทั้งหมดโดยอัตโนมัติ</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Tips Box -->
+            <div
+                style="padding: 20px; background: linear-gradient(135deg, rgba(243,144,63,0.1), rgba(39,134,194,0.1)); border-radius: 12px; border: 1px solid rgba(243,144,63,0.2);">
+                <div
+                    style="font-weight: 600; color: var(--dark-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.2rem;">💡</span> Pro Tips สำหรับ Theme Colors
+                </div>
+                <ul style="color: var(--slate); font-size: 0.9rem; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Theme Color 1-2:</strong> ใช้สำหรับ Text, Headings, Dark Backgrounds — ต้องอ่านเด่นชัด
+                    </li>
+                    <li><strong>Theme Color 3:</strong> Orange (#F3903F) — L2 GenAI Products (Primary Button, CTA)</li>
+                    <li><strong>Theme Color 4-5:</strong> Yellow + Lime Gradient — L3 AI Agents Products (Accent,
+                        Highlights)</li>
+                    <li><strong>Theme Color 6:</strong> ใช้สำหรับ Light backgrounds — ช่วยให้ Slide ไม่เหมือนสีเดียว
+                    </li>
+                    <li><strong>Contrast Check:</strong> ทดสอบว่า Text บน Background มี Contrast พอ (WCAG AA standard)
+                    </li>
+                    <li><strong>PowerPoint Color Picker:</strong> เมื่อเลือกสีในอ้างอิง แทน RGB ให้ใช้ "More Colors" →
+                        "Custom Colors" และป้อน Hex Code โดยตรง</li>
+                </ul>
+            </div>
         </div>
     </section>
 

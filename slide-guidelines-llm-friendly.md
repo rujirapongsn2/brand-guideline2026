@@ -5,6 +5,16 @@ This document provides comprehensive guidelines for creating Softnix-branded pre
 
 ## 🎨 Color Palette
 
+### Color Palette Design Rationale
+
+The Softnix color palette is inspired by the logo's gradient design, which features a vertical color progression from bottom to top:
+
+- **Bottom (Blue - #2786C2)**: Represents stability, trustworthiness, and reliability - perfect for Layer 1 products that form the foundation of data infrastructure
+- **Middle (Yellow - #FDC70C)**: Symbolizes sustainability, value, and practical benefits - aligning with Layer 2's AI infrastructure
+- **Top (Lime - #A9CB2E)**: Embodies diversity, innovation, and technological advancement - matching Layer 3's intelligent applications
+
+This color progression reflects Softnix's 3-layer value stack, creating a visual metaphor for the company's comprehensive AI infrastructure approach.
+
 ### Primary Brand Colors
 ```markdown
 - Softnix Orange: #F3903F (RGB: 243, 144, 63) - Energy, Innovation
