@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components Guide — Softnix Brand Guidelines 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Colors */
+            --orange: #F3903F;
+            --orange-light: #F9B77A;
+            --yellow: #FDC70C;
+            --lime: #A9CB2E;
+            --lime-light: #C4DD6B;
+            --blue: #2786C2;
+            --blue-light: #5EADD6;
+
+            /* Neutral Colors */
+            --dark-navy: #0D1B2A;
+            --charcoal: #1B263B;
+            --slate: #778DA9;
+            --light-slate: #9BA8B4;
+            --off-white: #F8F9FA;
+            --pure-white: #FFFFFF;
+
+            /* Semantic Colors */
+            --success: #A9CB2E;
+            --warning: #FDC70C;
+            --error: #E53935;
+            --info: #2786C2;
+
+            /* Gradients */
+            --gradient-l2: linear-gradient(90deg, #FDC70C, #A9CB2E);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: var(--off-white);
+            color: var(--dark-navy);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: var(--dark-navy);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .header h1 span {
+            background: var(--gradient-l2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            color: var(--slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        /* Navigation */
+        .nav-section {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 40px;
+            position: sticky;
+            top: 68px;
+            z-index: 99;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--off-white);
+            color: var(--dark-navy);
+        }
+
+        .nav-link.active {
+            background: var(--dark-navy);
+            color: white;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark-navy);
+        }
+
+        .section-subtitle {
+            color: var(--slate);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Mode Sections */
+        .mode-section {
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .mode-section.light {
+            background: var(--pure-white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .mode-section.dark {
+            background: var(--dark-navy);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .mode-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .mode-badge.light {
+            background: var(--off-white);
+            color: var(--dark-navy);
+        }
+
+        .mode-badge.dark {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        /* Layer Sections */
+        .layer-section {
+            margin-bottom: 50px;
+        }
+
+        .layer-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .layer-color-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+        }
+
+        .layer-color-box.gradient {
+            width: 48px;
+        }
+
+        /* Component Grid */
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .component-card {
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .component-card.light {
+            background: var(--off-white);
+        }
+
+        .component-card.dark {
+            background: var(--charcoal);
+        }
+
+        .component-label {
+            font-size: 0.8rem;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .component-label.light {
+            color: var(--slate);
+        }
+
+        .component-label.dark {
+            color: var(--light-slate);
+        }
+
+        .component-code {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.75rem;
+            margin-top: 5px;
+        }
+
+        .component-code.light {
+            background: #e8e8e8;
+            color: var(--slate);
+        }
+
+        .component-code.dark {
+            background: rgba(255,255,255,0.1);
+            color: #aaa;
+        }
+
+        /* Input Styles */
+        .demo-input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-family: 'Sarabun', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .demo-input.light {
+            background: white;
+            border: 2px solid #e0e0e0;
+            color: var(--dark-navy);
+        }
+
+        .demo-input.dark {
+            background: var(--dark-navy);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .demo-input.light::placeholder {
+            color: var(--light-slate);
+        }
+
+        .demo-input.dark::placeholder {
+            color: var(--slate);
+        }
+
+        /* Checkbox & Radio */
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .demo-checkbox {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .demo-radio {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .demo-radio-inner {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        /* Toggle Switch */
+        .toggle-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .demo-toggle {
+            width: 52px;
+            height: 28px;
+            border-radius: 14px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .demo-toggle::after {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .demo-toggle.on::after {
+            left: 27px;
+        }
+
+        /* Alert/Toast */
+        .demo-alert {
+            padding: 14px 18px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .alert-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Tab Navigation */
+        .demo-tabs {
+            display: flex;
+            gap: 5px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .demo-tabs.light {
+            background: #e8e8e8;
+        }
+
+        .demo-tabs.dark {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .demo-tab {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .demo-tab.light {
+            color: var(--slate);
+        }
+
+        .demo-tab.dark {
+            color: var(--light-slate);
+        }
+
+        .demo-tab.active {
+            color: white;
+        }
+
+        /* Pagination */
+        .demo-pagination {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .demo-page {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .demo-page.light {
+            background: #e8e8e8;
+            color: var(--slate);
+        }
+
+        .demo-page.dark {
+            background: rgba(255,255,255,0.1);
+            color: var(--light-slate);
+        }
+
+        .demo-page.active {
+            color: white;
+        }
+
+        /* Breadcrumb */
+        .demo-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-separator {
+            color: var(--slate);
+        }
+
+        /* Avatar */
+        .demo-avatar-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .demo-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+            position: relative;
+        }
+
+        .avatar-status {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            bottom: 0;
+            right: 0;
+            border: 2px solid;
+        }
+
+        .avatar-status.light {
+            border-color: var(--off-white);
+        }
+
+        .avatar-status.dark {
+            border-color: var(--charcoal);
+        }
+
+        /* Chip/Tag */
+        .demo-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .chip-close {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+
+        /* Tooltip */
+        .tooltip-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .demo-tooltip {
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .demo-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+        }
+
+        /* Spinner */
+        .demo-spinner {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 4px solid;
+            border-top-color: transparent !important;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Skeleton */
+        .demo-skeleton {
+            border-radius: 8px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .demo-skeleton.light {
+            background: linear-gradient(90deg, #e8e8e8 25%, #f0f0f0 50%, #e8e8e8 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .demo-skeleton.dark {
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.1) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* States Reference Table */
+        .states-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .states-table th,
+        .states-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .states-table th {
+            background: var(--off-white);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--dark-navy);
+        }
+
+        .states-table code {
+            background: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Pro Tips Box */
+        .pro-tips {
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .pro-tips h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .pro-tips ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .pro-tips li {
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--slate);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>UI Components <span>Guide</span></h1>
+            <a href="softnix-brand-guidelines-2026.html" class="back-link">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                Back to Brand Guidelines
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-section">
+        <div class="nav-content">
+            <a href="#form-elements" class="nav-link">Form Elements</a>
+            <a href="#feedback" class="nav-link">Feedback & Status</a>
+            <a href="#navigation" class="nav-link">Navigation</a>
+            <a href="#interactive" class="nav-link">Interactive</a>
+            <a href="#states" class="nav-link">States Reference</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="section">
+            <h1 class="section-title">UI Components Guide</h1>
+            <p class="section-subtitle">ตัวอย่าง UI Components พร้อมแนวทางการใช้สีตาม Product Layer สำหรับ Web Designer</p>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- FORM ELEMENTS -->
+        <!-- ============================================ -->
+        <section id="form-elements" class="section">
+            <h2 class="section-title">Form Elements</h2>
+            <p class="section-subtitle">Input, Checkbox, Radio, Toggle Switch</p>
+
+            <!-- Light Mode -->
+            <div class="mode-section light">
+                <span class="mode-badge light">Light Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products — AI-Ready Agents, DFlow
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Input Default -->
+                        <div class="component-card light">
+                            <input type="text" class="demo-input light" placeholder="Enter your email..." style="border-color: #e0e0e0;">
+                            <p class="component-label light">Input Default</p>
+                            <code class="component-code light">border: #e0e0e0</code>
+                        </div>
+                        <!-- Input Focus -->
+                        <div class="component-card light">
+                            <input type="text" class="demo-input light" placeholder="Focused input" style="border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,144,63,0.15);">
+                            <p class="component-label light">Input Focus</p>
+                            <code class="component-code light">border: #F3903F + shadow</code>
+                        </div>
+                        <!-- Input Error -->
+                        <div class="component-card light">
+                            <input type="text" class="demo-input light" value="Invalid input" style="border-color: var(--error); box-shadow: 0 0 0 3px rgba(229,57,53,0.15);">
+                            <p class="component-label light">Input Error</p>
+                            <code class="component-code light">border: #E53935</code>
+                        </div>
+                        <!-- Input Success -->
+                        <div class="component-card light">
+                            <input type="text" class="demo-input light" value="Valid input" style="border-color: var(--success); box-shadow: 0 0 0 3px rgba(169,203,46,0.15);">
+                            <p class="component-label light">Input Success</p>
+                            <code class="component-code light">border: #A9CB2E</code>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="component-card light">
+                            <div class="checkbox-wrapper">
+                                <div class="demo-checkbox" style="background: var(--orange);">
+                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                </div>
+                                <span style="color: var(--dark-navy);">Checked</span>
+                                <div class="demo-checkbox" style="background: white; border: 2px solid #d0d0d0;"></div>
+                                <span style="color: var(--slate);">Unchecked</span>
+                            </div>
+                            <p class="component-label light">Checkbox</p>
+                            <code class="component-code light">bg: #F3903F</code>
+                        </div>
+                        <!-- Radio -->
+                        <div class="component-card light">
+                            <div class="checkbox-wrapper">
+                                <div class="demo-radio" style="background: var(--orange);">
+                                    <div class="demo-radio-inner"></div>
+                                </div>
+                                <span style="color: var(--dark-navy);">Selected</span>
+                                <div class="demo-radio" style="background: white; border: 2px solid #d0d0d0;"></div>
+                                <span style="color: var(--slate);">Unselected</span>
+                            </div>
+                            <p class="component-label light">Radio Button</p>
+                            <code class="component-code light">bg: #F3903F</code>
+                        </div>
+                        <!-- Toggle -->
+                        <div class="component-card light">
+                            <div class="toggle-wrapper">
+                                <div class="demo-toggle on" style="background: var(--orange);"></div>
+                                <span style="color: var(--dark-navy);">ON</span>
+                                <div class="demo-toggle" style="background: #d0d0d0;"></div>
+                                <span style="color: var(--slate);">OFF</span>
+                            </div>
+                            <p class="component-label light">Toggle Switch</p>
+                            <code class="component-code light">bg: #F3903F</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products — Softnix GenAI, Softnix Logger
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Input Focus -->
+                        <div class="component-card light">
+                            <input type="text" class="demo-input light" placeholder="Focused input" style="border-color: var(--lime); box-shadow: 0 0 0 3px rgba(169,203,46,0.15);">
+                            <p class="component-label light">Input Focus</p>
+                            <code class="component-code light">border: #A9CB2E + shadow</code>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="component-card light">
+                            <div class="checkbox-wrapper">
+                                <div class="demo-checkbox" style="background: var(--gradient-l2);">
+                                    <svg width="14" height="14" fill="var(--dark-navy)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                </div>
+                                <span style="color: var(--dark-navy);">Checked</span>
+                            </div>
+                            <p class="component-label light">Checkbox (Gradient)</p>
+                            <code class="component-code light">bg: gradient</code>
+                        </div>
+                        <!-- Toggle -->
+                        <div class="component-card light">
+                            <div class="toggle-wrapper">
+                                <div class="demo-toggle on" style="background: var(--gradient-l2);"></div>
+                                <span style="color: var(--dark-navy);">ON</span>
+                            </div>
+                            <p class="component-label light">Toggle (Gradient)</p>
+                            <code class="component-code light">bg: gradient</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Input Focus -->
+                        <div class="component-card light">
+                            <input type="text" class="demo-input light" placeholder="Focused input" style="border-color: var(--blue); box-shadow: 0 0 0 3px rgba(39,134,194,0.15);">
+                            <p class="component-label light">Input Focus</p>
+                            <code class="component-code light">border: #2786C2 + shadow</code>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="component-card light">
+                            <div class="checkbox-wrapper">
+                                <div class="demo-checkbox" style="background: var(--blue);">
+                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                </div>
+                                <span style="color: var(--dark-navy);">Checked</span>
+                            </div>
+                            <p class="component-label light">Checkbox</p>
+                            <code class="component-code light">bg: #2786C2</code>
+                        </div>
+                        <!-- Toggle -->
+                        <div class="component-card light">
+                            <div class="toggle-wrapper">
+                                <div class="demo-toggle on" style="background: var(--blue);"></div>
+                                <span style="color: var(--dark-navy);">ON</span>
+                            </div>
+                            <p class="component-label light">Toggle Switch</p>
+                            <code class="component-code light">bg: #2786C2</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Mode -->
+            <div class="mode-section dark">
+                <span class="mode-badge dark">Dark Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products — AI-Ready Agents, DFlow
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Input Default -->
+                        <div class="component-card dark">
+                            <input type="text" class="demo-input dark" placeholder="Enter your email...">
+                            <p class="component-label dark">Input Default</p>
+                            <code class="component-code dark">border: rgba(255,255,255,0.2)</code>
+                        </div>
+                        <!-- Input Focus -->
+                        <div class="component-card dark">
+                            <input type="text" class="demo-input dark" placeholder="Focused input" style="border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,144,63,0.25);">
+                            <p class="component-label dark">Input Focus</p>
+                            <code class="component-code dark">border: #F3903F + glow</code>
+                        </div>
+                        <!-- Checkbox -->
+                        <div class="component-card dark">
+                            <div class="checkbox-wrapper">
+                                <div class="demo-checkbox" style="background: var(--orange);">
+                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                </div>
+                                <span style="color: white;">Checked</span>
+                            </div>
+                            <p class="component-label dark">Checkbox</p>
+                            <code class="component-code dark">bg: #F3903F</code>
+                        </div>
+                        <!-- Toggle -->
+                        <div class="component-card dark">
+                            <div class="toggle-wrapper">
+                                <div class="demo-toggle on" style="background: var(--orange);"></div>
+                                <span style="color: white;">ON</span>
+                            </div>
+                            <p class="component-label dark">Toggle Switch</p>
+                            <code class="component-code dark">bg: #F3903F</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products — Softnix GenAI, Softnix Logger
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Input Focus -->
+                        <div class="component-card dark">
+                            <input type="text" class="demo-input dark" placeholder="Focused input" style="border-color: var(--lime); box-shadow: 0 0 0 3px rgba(169,203,46,0.25);">
+                            <p class="component-label dark">Input Focus (Gradient Glow)</p>
+                            <code class="component-code dark">border: #A9CB2E</code>
+                        </div>
+                        <!-- Toggle -->
+                        <div class="component-card dark">
+                            <div class="toggle-wrapper">
+                                <div class="demo-toggle on" style="background: var(--gradient-l2);"></div>
+                                <span style="color: white;">ON</span>
+                            </div>
+                            <p class="component-label dark">Toggle (Gradient)</p>
+                            <code class="component-code dark">bg: gradient</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue-light);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Input Focus -->
+                        <div class="component-card dark">
+                            <input type="text" class="demo-input dark" placeholder="Focused input" style="border-color: var(--blue); box-shadow: 0 0 0 3px rgba(39,134,194,0.25);">
+                            <p class="component-label dark">Input Focus</p>
+                            <code class="component-code dark">border: #2786C2 + glow</code>
+                        </div>
+                        <!-- Toggle -->
+                        <div class="component-card dark">
+                            <div class="toggle-wrapper">
+                                <div class="demo-toggle on" style="background: var(--blue);"></div>
+                                <span style="color: white;">ON</span>
+                            </div>
+                            <p class="component-label dark">Toggle Switch</p>
+                            <code class="component-code dark">bg: #2786C2</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FEEDBACK & STATUS -->
+        <!-- ============================================ -->
+        <section id="feedback" class="section">
+            <h2 class="section-title">Feedback & Status</h2>
+            <p class="section-subtitle">Alert/Toast, Tooltip, Spinner, Skeleton Loader</p>
+
+            <!-- Light Mode -->
+            <div class="mode-section light">
+                <span class="mode-badge light">Light Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products — AI-Ready Agents, DFlow
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Alert Success -->
+                        <div class="component-card light">
+                            <div class="demo-alert" style="background: rgba(169,203,46,0.15); color: #7FA31E;">
+                                <span class="alert-icon">✓</span>
+                                <span>Successfully saved!</span>
+                            </div>
+                            <p class="component-label light">Alert Success</p>
+                            <code class="component-code light">bg: rgba(169,203,46,0.15)</code>
+                        </div>
+                        <!-- Alert Warning -->
+                        <div class="component-card light">
+                            <div class="demo-alert" style="background: rgba(253,199,12,0.15); color: #B8960A;">
+                                <span class="alert-icon">⚠</span>
+                                <span>Please review your input</span>
+                            </div>
+                            <p class="component-label light">Alert Warning</p>
+                            <code class="component-code light">bg: rgba(253,199,12,0.15)</code>
+                        </div>
+                        <!-- Alert Error -->
+                        <div class="component-card light">
+                            <div class="demo-alert" style="background: rgba(229,57,53,0.1); color: var(--error);">
+                                <span class="alert-icon">✕</span>
+                                <span>An error occurred</span>
+                            </div>
+                            <p class="component-label light">Alert Error</p>
+                            <code class="component-code light">bg: rgba(229,57,53,0.1)</code>
+                        </div>
+                        <!-- Alert Info -->
+                        <div class="component-card light">
+                            <div class="demo-alert" style="background: rgba(243,144,63,0.1); color: var(--orange);">
+                                <span class="alert-icon">ℹ</span>
+                                <span>New update available</span>
+                            </div>
+                            <p class="component-label light">Alert Info (Brand Color)</p>
+                            <code class="component-code light">bg: rgba(243,144,63,0.1)</code>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="component-card light">
+                            <div class="demo-tooltip" style="background: var(--orange); color: white;">
+                                Helpful tooltip text
+                                <style>.demo-tooltip[style*="F3903F"]::after { border-top: 6px solid var(--orange); }</style>
+                            </div>
+                            <p class="component-label light">Tooltip</p>
+                            <code class="component-code light">bg: #F3903F</code>
+                        </div>
+                        <!-- Spinner -->
+                        <div class="component-card light">
+                            <div style="display: flex; justify-content: center;">
+                                <div class="demo-spinner" style="border-color: rgba(243,144,63,0.2); border-top-color: var(--orange);"></div>
+                            </div>
+                            <p class="component-label light">Loading Spinner</p>
+                            <code class="component-code light">border: #F3903F</code>
+                        </div>
+                        <!-- Skeleton -->
+                        <div class="component-card light">
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div class="demo-skeleton light" style="height: 12px; width: 80%;"></div>
+                                <div class="demo-skeleton light" style="height: 12px; width: 60%;"></div>
+                                <div class="demo-skeleton light" style="height: 12px; width: 70%;"></div>
+                            </div>
+                            <p class="component-label light">Skeleton Loader</p>
+                            <code class="component-code light">bg: shimmer animation</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products — Softnix GenAI, Softnix Logger
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Alert Info Gradient -->
+                        <div class="component-card light">
+                            <div class="demo-alert" style="background: linear-gradient(90deg, rgba(253,199,12,0.1), rgba(169,203,46,0.1)); color: #7FA31E;">
+                                <span class="alert-icon">⚡</span>
+                                <span>AI is processing...</span>
+                            </div>
+                            <p class="component-label light">Alert Info (Gradient)</p>
+                            <code class="component-code light">bg: gradient 10%</code>
+                        </div>
+                        <!-- Tooltip Gradient -->
+                        <div class="component-card light">
+                            <div class="demo-tooltip" style="background: var(--gradient-l2); color: var(--dark-navy);">
+                                Gradient tooltip
+                            </div>
+                            <p class="component-label light">Tooltip (Gradient)</p>
+                            <code class="component-code light">bg: gradient</code>
+                        </div>
+                        <!-- Spinner -->
+                        <div class="component-card light">
+                            <div style="display: flex; justify-content: center;">
+                                <div class="demo-spinner" style="border-color: rgba(169,203,46,0.2); border-top-color: var(--lime);"></div>
+                            </div>
+                            <p class="component-label light">Loading Spinner</p>
+                            <code class="component-code light">border: #A9CB2E</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Alert Info Blue -->
+                        <div class="component-card light">
+                            <div class="demo-alert" style="background: rgba(39,134,194,0.1); color: var(--blue);">
+                                <span class="alert-icon">ℹ</span>
+                                <span>Data sync in progress</span>
+                            </div>
+                            <p class="component-label light">Alert Info (Blue)</p>
+                            <code class="component-code light">bg: rgba(39,134,194,0.1)</code>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="component-card light">
+                            <div class="demo-tooltip" style="background: var(--blue); color: white;">
+                                Blue tooltip text
+                            </div>
+                            <p class="component-label light">Tooltip</p>
+                            <code class="component-code light">bg: #2786C2</code>
+                        </div>
+                        <!-- Spinner -->
+                        <div class="component-card light">
+                            <div style="display: flex; justify-content: center;">
+                                <div class="demo-spinner" style="border-color: rgba(39,134,194,0.2); border-top-color: var(--blue);"></div>
+                            </div>
+                            <p class="component-label light">Loading Spinner</p>
+                            <code class="component-code light">border: #2786C2</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Mode -->
+            <div class="mode-section dark">
+                <span class="mode-badge dark">Dark Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Alert Info -->
+                        <div class="component-card dark">
+                            <div class="demo-alert" style="background: rgba(243,144,63,0.15); color: var(--orange-light); border: 1px solid rgba(243,144,63,0.3);">
+                                <span class="alert-icon">ℹ</span>
+                                <span>New update available</span>
+                            </div>
+                            <p class="component-label dark">Alert Info</p>
+                            <code class="component-code dark">bg: rgba(243,144,63,0.15)</code>
+                        </div>
+                        <!-- Spinner -->
+                        <div class="component-card dark">
+                            <div style="display: flex; justify-content: center;">
+                                <div class="demo-spinner" style="border-color: rgba(243,144,63,0.3); border-top-color: var(--orange);"></div>
+                            </div>
+                            <p class="component-label dark">Loading Spinner</p>
+                            <code class="component-code dark">glow effect</code>
+                        </div>
+                        <!-- Skeleton -->
+                        <div class="component-card dark">
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div class="demo-skeleton dark" style="height: 12px; width: 80%;"></div>
+                                <div class="demo-skeleton dark" style="height: 12px; width: 60%;"></div>
+                                <div class="demo-skeleton dark" style="height: 12px; width: 70%;"></div>
+                            </div>
+                            <p class="component-label dark">Skeleton Loader</p>
+                            <code class="component-code dark">bg: shimmer dark</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Alert Gradient -->
+                        <div class="component-card dark">
+                            <div class="demo-alert" style="background: linear-gradient(90deg, rgba(253,199,12,0.15), rgba(169,203,46,0.15)); color: var(--lime-light); border: 1px solid rgba(169,203,46,0.3);">
+                                <span class="alert-icon">⚡</span>
+                                <span>AI is ready</span>
+                            </div>
+                            <p class="component-label dark">Alert (Gradient)</p>
+                            <code class="component-code dark">bg: gradient 15%</code>
+                        </div>
+                        <!-- Spinner -->
+                        <div class="component-card dark">
+                            <div style="display: flex; justify-content: center;">
+                                <div class="demo-spinner" style="border-color: rgba(169,203,46,0.3); border-top-color: var(--lime);"></div>
+                            </div>
+                            <p class="component-label dark">Loading Spinner</p>
+                            <code class="component-code dark">glow effect</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue-light);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Alert Blue -->
+                        <div class="component-card dark">
+                            <div class="demo-alert" style="background: rgba(39,134,194,0.15); color: var(--blue-light); border: 1px solid rgba(39,134,194,0.3);">
+                                <span class="alert-icon">ℹ</span>
+                                <span>Data sync complete</span>
+                            </div>
+                            <p class="component-label dark">Alert Info</p>
+                            <code class="component-code dark">bg: rgba(39,134,194,0.15)</code>
+                        </div>
+                        <!-- Spinner -->
+                        <div class="component-card dark">
+                            <div style="display: flex; justify-content: center;">
+                                <div class="demo-spinner" style="border-color: rgba(39,134,194,0.3); border-top-color: var(--blue);"></div>
+                            </div>
+                            <p class="component-label dark">Loading Spinner</p>
+                            <code class="component-code dark">glow effect</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- NAVIGATION -->
+        <!-- ============================================ -->
+        <section id="navigation" class="section">
+            <h2 class="section-title">Navigation Components</h2>
+            <p class="section-subtitle">Tab, Pagination, Breadcrumb</p>
+
+            <!-- Light Mode -->
+            <div class="mode-section light">
+                <span class="mode-badge light">Light Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products — AI-Ready Agents, DFlow
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Tabs -->
+                        <div class="component-card light">
+                            <div class="demo-tabs light">
+                                <div class="demo-tab active" style="background: var(--orange);">Overview</div>
+                                <div class="demo-tab light">Settings</div>
+                                <div class="demo-tab light">Logs</div>
+                            </div>
+                            <p class="component-label light">Tab Navigation</p>
+                            <code class="component-code light">active: #F3903F</code>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="component-card light">
+                            <div class="demo-pagination">
+                                <div class="demo-page light">‹</div>
+                                <div class="demo-page light">1</div>
+                                <div class="demo-page active" style="background: var(--orange);">2</div>
+                                <div class="demo-page light">3</div>
+                                <div class="demo-page light">›</div>
+                            </div>
+                            <p class="component-label light">Pagination</p>
+                            <code class="component-code light">active: #F3903F</code>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div class="component-card light">
+                            <div class="demo-breadcrumb">
+                                <a href="#" style="color: var(--orange); text-decoration: none;">Home</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <a href="#" style="color: var(--orange); text-decoration: none;">Products</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <span style="color: var(--slate);">AI Agents</span>
+                            </div>
+                            <p class="component-label light">Breadcrumb</p>
+                            <code class="component-code light">link: #F3903F</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products — Softnix GenAI, Softnix Logger
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Tabs Gradient -->
+                        <div class="component-card light">
+                            <div class="demo-tabs light">
+                                <div class="demo-tab active" style="background: var(--gradient-l2); color: var(--dark-navy);">Overview</div>
+                                <div class="demo-tab light">Settings</div>
+                                <div class="demo-tab light">Logs</div>
+                            </div>
+                            <p class="component-label light">Tab (Gradient)</p>
+                            <code class="component-code light">active: gradient</code>
+                        </div>
+                        <!-- Pagination Gradient -->
+                        <div class="component-card light">
+                            <div class="demo-pagination">
+                                <div class="demo-page light">‹</div>
+                                <div class="demo-page light">1</div>
+                                <div class="demo-page active" style="background: var(--gradient-l2); color: var(--dark-navy);">2</div>
+                                <div class="demo-page light">3</div>
+                                <div class="demo-page light">›</div>
+                            </div>
+                            <p class="component-label light">Pagination (Gradient)</p>
+                            <code class="component-code light">active: gradient</code>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div class="component-card light">
+                            <div class="demo-breadcrumb">
+                                <a href="#" style="color: #7FA31E; text-decoration: none;">Home</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <a href="#" style="color: #7FA31E; text-decoration: none;">Products</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <span style="color: var(--slate);">GenAI</span>
+                            </div>
+                            <p class="component-label light">Breadcrumb</p>
+                            <code class="component-code light">link: #7FA31E</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Tabs Blue -->
+                        <div class="component-card light">
+                            <div class="demo-tabs light">
+                                <div class="demo-tab active" style="background: var(--blue);">Overview</div>
+                                <div class="demo-tab light">Settings</div>
+                                <div class="demo-tab light">Logs</div>
+                            </div>
+                            <p class="component-label light">Tab Navigation</p>
+                            <code class="component-code light">active: #2786C2</code>
+                        </div>
+                        <!-- Pagination Blue -->
+                        <div class="component-card light">
+                            <div class="demo-pagination">
+                                <div class="demo-page light">‹</div>
+                                <div class="demo-page light">1</div>
+                                <div class="demo-page active" style="background: var(--blue);">2</div>
+                                <div class="demo-page light">3</div>
+                                <div class="demo-page light">›</div>
+                            </div>
+                            <p class="component-label light">Pagination</p>
+                            <code class="component-code light">active: #2786C2</code>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div class="component-card light">
+                            <div class="demo-breadcrumb">
+                                <a href="#" style="color: var(--blue); text-decoration: none;">Home</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <a href="#" style="color: var(--blue); text-decoration: none;">Products</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <span style="color: var(--slate);">Data Platform</span>
+                            </div>
+                            <p class="component-label light">Breadcrumb</p>
+                            <code class="component-code light">link: #2786C2</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Mode -->
+            <div class="mode-section dark">
+                <span class="mode-badge dark">Dark Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Tabs -->
+                        <div class="component-card dark">
+                            <div class="demo-tabs dark">
+                                <div class="demo-tab active" style="background: var(--orange);">Overview</div>
+                                <div class="demo-tab dark">Settings</div>
+                                <div class="demo-tab dark">Logs</div>
+                            </div>
+                            <p class="component-label dark">Tab Navigation</p>
+                            <code class="component-code dark">active: #F3903F</code>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="component-card dark">
+                            <div class="demo-pagination">
+                                <div class="demo-page dark">‹</div>
+                                <div class="demo-page dark">1</div>
+                                <div class="demo-page active" style="background: var(--orange);">2</div>
+                                <div class="demo-page dark">3</div>
+                                <div class="demo-page dark">›</div>
+                            </div>
+                            <p class="component-label dark">Pagination</p>
+                            <code class="component-code dark">active: #F3903F</code>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div class="component-card dark">
+                            <div class="demo-breadcrumb">
+                                <a href="#" style="color: var(--orange-light); text-decoration: none;">Home</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <a href="#" style="color: var(--orange-light); text-decoration: none;">Products</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <span style="color: var(--light-slate);">AI Agents</span>
+                            </div>
+                            <p class="component-label dark">Breadcrumb (Lighter)</p>
+                            <code class="component-code dark">link: #F9B77A</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Tabs Gradient -->
+                        <div class="component-card dark">
+                            <div class="demo-tabs dark">
+                                <div class="demo-tab active" style="background: var(--gradient-l2); color: var(--dark-navy);">Overview</div>
+                                <div class="demo-tab dark">Settings</div>
+                            </div>
+                            <p class="component-label dark">Tab (Gradient)</p>
+                            <code class="component-code dark">active: gradient</code>
+                        </div>
+                        <!-- Pagination -->
+                        <div class="component-card dark">
+                            <div class="demo-pagination">
+                                <div class="demo-page dark">‹</div>
+                                <div class="demo-page active" style="background: var(--gradient-l2); color: var(--dark-navy);">2</div>
+                                <div class="demo-page dark">›</div>
+                            </div>
+                            <p class="component-label dark">Pagination (Gradient)</p>
+                            <code class="component-code dark">active: gradient</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue-light);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Tabs Blue -->
+                        <div class="component-card dark">
+                            <div class="demo-tabs dark">
+                                <div class="demo-tab active" style="background: var(--blue);">Overview</div>
+                                <div class="demo-tab dark">Settings</div>
+                            </div>
+                            <p class="component-label dark">Tab Navigation</p>
+                            <code class="component-code dark">active: #2786C2</code>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div class="component-card dark">
+                            <div class="demo-breadcrumb">
+                                <a href="#" style="color: var(--blue-light); text-decoration: none;">Home</a>
+                                <span class="breadcrumb-separator">/</span>
+                                <span style="color: var(--light-slate);">Data Platform</span>
+                            </div>
+                            <p class="component-label dark">Breadcrumb (Lighter)</p>
+                            <code class="component-code dark">link: #5EADD6</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- INTERACTIVE COMPONENTS -->
+        <!-- ============================================ -->
+        <section id="interactive" class="section">
+            <h2 class="section-title">Interactive Components</h2>
+            <p class="section-subtitle">Avatar, Chip/Tag, และอื่นๆ</p>
+
+            <!-- Light Mode -->
+            <div class="mode-section light">
+                <span class="mode-badge light">Light Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products — AI-Ready Agents, DFlow
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Avatar -->
+                        <div class="component-card light">
+                            <div class="demo-avatar-wrapper">
+                                <div class="demo-avatar" style="background: var(--orange);">
+                                    JD
+                                    <div class="avatar-status light" style="background: var(--success);"></div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: var(--dark-navy);">John Doe</div>
+                                    <div style="font-size: 0.85rem; color: var(--slate);">Online</div>
+                                </div>
+                            </div>
+                            <p class="component-label light">Avatar with Status</p>
+                            <code class="component-code light">bg: #F3903F</code>
+                        </div>
+                        <!-- Chip Removable -->
+                        <div class="component-card light">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <div class="demo-chip" style="background: rgba(243,144,63,0.15); color: var(--orange);">
+                                    AI Agent
+                                    <div class="chip-close" style="background: rgba(243,144,63,0.2);">×</div>
+                                </div>
+                                <div class="demo-chip" style="background: rgba(243,144,63,0.15); color: var(--orange);">
+                                    DFlow
+                                    <div class="chip-close" style="background: rgba(243,144,63,0.2);">×</div>
+                                </div>
+                            </div>
+                            <p class="component-label light">Removable Chips</p>
+                            <code class="component-code light">bg: rgba(243,144,63,0.15)</code>
+                        </div>
+                        <!-- Badge Notification -->
+                        <div class="component-card light">
+                            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                                <div style="position: relative; display: inline-block;">
+                                    <svg width="28" height="28" fill="var(--slate)" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                                    <span style="position: absolute; top: -5px; right: -5px; background: var(--orange); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 10px; font-weight: 600;">3</span>
+                                </div>
+                                <span style="color: var(--slate); font-size: 0.9rem;">Notification Badge</span>
+                            </div>
+                            <p class="component-label light">Badge Notification</p>
+                            <code class="component-code light">bg: #F3903F</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products — Softnix GenAI, Softnix Logger
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Avatar Gradient -->
+                        <div class="component-card light">
+                            <div class="demo-avatar-wrapper">
+                                <div class="demo-avatar" style="background: var(--gradient-l2); color: var(--dark-navy);">
+                                    AI
+                                    <div class="avatar-status light" style="background: var(--success);"></div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: var(--dark-navy);">GenAI Bot</div>
+                                    <div style="font-size: 0.85rem; color: var(--slate);">Active</div>
+                                </div>
+                            </div>
+                            <p class="component-label light">Avatar (Gradient)</p>
+                            <code class="component-code light">bg: gradient</code>
+                        </div>
+                        <!-- Chip Gradient -->
+                        <div class="component-card light">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <div class="demo-chip" style="background: linear-gradient(90deg, rgba(253,199,12,0.15), rgba(169,203,46,0.15)); color: #7FA31E;">
+                                    GenAI
+                                    <div class="chip-close" style="background: rgba(169,203,46,0.2);">×</div>
+                                </div>
+                            </div>
+                            <p class="component-label light">Chip (Gradient BG)</p>
+                            <code class="component-code light">bg: gradient 15%</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Avatar Blue -->
+                        <div class="component-card light">
+                            <div class="demo-avatar-wrapper">
+                                <div class="demo-avatar" style="background: var(--blue);">
+                                    DP
+                                    <div class="avatar-status light" style="background: var(--success);"></div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: var(--dark-navy);">Data Platform</div>
+                                    <div style="font-size: 0.85rem; color: var(--slate);">Connected</div>
+                                </div>
+                            </div>
+                            <p class="component-label light">Avatar</p>
+                            <code class="component-code light">bg: #2786C2</code>
+                        </div>
+                        <!-- Chip Blue -->
+                        <div class="component-card light">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <div class="demo-chip" style="background: rgba(39,134,194,0.15); color: var(--blue);">
+                                    Data Source
+                                    <div class="chip-close" style="background: rgba(39,134,194,0.2);">×</div>
+                                </div>
+                            </div>
+                            <p class="component-label light">Removable Chip</p>
+                            <code class="component-code light">bg: rgba(39,134,194,0.15)</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Mode -->
+            <div class="mode-section dark">
+                <span class="mode-badge dark">Dark Mode</span>
+
+                <!-- Layer 3 - Orange -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
+                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                        Layer 3 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Avatar -->
+                        <div class="component-card dark">
+                            <div class="demo-avatar-wrapper">
+                                <div class="demo-avatar" style="background: var(--orange);">
+                                    JD
+                                    <div class="avatar-status dark" style="background: var(--success);"></div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: white;">John Doe</div>
+                                    <div style="font-size: 0.85rem; color: var(--light-slate);">Online</div>
+                                </div>
+                            </div>
+                            <p class="component-label dark">Avatar with Status</p>
+                            <code class="component-code dark">bg: #F3903F</code>
+                        </div>
+                        <!-- Chip -->
+                        <div class="component-card dark">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                                <div class="demo-chip" style="background: rgba(243,144,63,0.2); color: var(--orange-light); border: 1px solid rgba(243,144,63,0.3);">
+                                    AI Agent
+                                    <div class="chip-close" style="background: rgba(243,144,63,0.3);">×</div>
+                                </div>
+                            </div>
+                            <p class="component-label dark">Removable Chip</p>
+                            <code class="component-code dark">bg: rgba(243,144,63,0.2)</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 2 - Gradient -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
+                        Layer 2 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Avatar Gradient -->
+                        <div class="component-card dark">
+                            <div class="demo-avatar-wrapper">
+                                <div class="demo-avatar" style="background: var(--gradient-l2); color: var(--dark-navy);">
+                                    AI
+                                    <div class="avatar-status dark" style="background: var(--success);"></div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: white;">GenAI Bot</div>
+                                    <div style="font-size: 0.85rem; color: var(--light-slate);">Active</div>
+                                </div>
+                            </div>
+                            <p class="component-label dark">Avatar (Gradient)</p>
+                            <code class="component-code dark">bg: gradient</code>
+                        </div>
+                        <!-- Chip Gradient -->
+                        <div class="component-card dark">
+                            <div class="demo-chip" style="background: linear-gradient(90deg, rgba(253,199,12,0.2), rgba(169,203,46,0.2)); color: var(--lime-light); border: 1px solid rgba(169,203,46,0.3);">
+                                GenAI
+                                <div class="chip-close" style="background: rgba(169,203,46,0.3);">×</div>
+                            </div>
+                            <p class="component-label dark">Chip (Gradient)</p>
+                            <code class="component-code dark">bg: gradient 20%</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer 1 - Blue -->
+                <div class="layer-section">
+                    <h3 class="layer-title" style="color: var(--blue-light);">
+                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        Layer 1 Products
+                    </h3>
+                    <div class="component-grid">
+                        <!-- Avatar Blue -->
+                        <div class="component-card dark">
+                            <div class="demo-avatar-wrapper">
+                                <div class="demo-avatar" style="background: var(--blue);">
+                                    DP
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: white;">Data Platform</div>
+                                </div>
+                            </div>
+                            <p class="component-label dark">Avatar</p>
+                            <code class="component-code dark">bg: #2786C2</code>
+                        </div>
+                        <!-- Chip Blue -->
+                        <div class="component-card dark">
+                            <div class="demo-chip" style="background: rgba(39,134,194,0.2); color: var(--blue-light); border: 1px solid rgba(39,134,194,0.3);">
+                                Data Source
+                                <div class="chip-close" style="background: rgba(39,134,194,0.3);">×</div>
+                            </div>
+                            <p class="component-label dark">Removable Chip</p>
+                            <code class="component-code dark">bg: rgba(39,134,194,0.2)</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- STATES REFERENCE -->
+        <!-- ============================================ -->
+        <section id="states" class="section">
+            <h2 class="section-title">States Reference</h2>
+            <p class="section-subtitle">แนวทางการใช้สีสำหรับ Component States ต่างๆ</p>
+
+            <div class="mode-section light">
+                <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 25px; color: var(--dark-navy);">Component States — Quick Reference</h4>
+
+                <div style="overflow-x: auto;">
+                    <table class="states-table">
+                        <thead>
+                            <tr>
+                                <th>State</th>
+                                <th>Light Mode</th>
+                                <th>Dark Mode</th>
+                                <th>CSS Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 600;">Default</td>
+                                <td>Primary color 100%</td>
+                                <td>Primary color 100%</td>
+                                <td><code>background: #F3903F;</code></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">Hover</td>
+                                <td>Brightness -10% หรือ Shadow เพิ่ม</td>
+                                <td>Brightness +5% หรือ Glow เพิ่ม</td>
+                                <td><code>filter: brightness(0.9);</code></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">Active/Pressed</td>
+                                <td>Brightness -15%</td>
+                                <td>Brightness -5%</td>
+                                <td><code>filter: brightness(0.85);</code></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">Focus</td>
+                                <td>Primary color + Ring shadow</td>
+                                <td>Primary color + Glow ring</td>
+                                <td><code>box-shadow: 0 0 0 3px rgba(color, 0.25);</code></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">Disabled</td>
+                                <td>Opacity 50% + cursor not-allowed</td>
+                                <td>Opacity 40% + cursor not-allowed</td>
+                                <td><code>opacity: 0.5; cursor: not-allowed;</code></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 600;">Loading</td>
+                                <td>Opacity 70% + spinner</td>
+                                <td>Opacity 70% + spinner</td>
+                                <td><code>opacity: 0.7; pointer-events: none;</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pro Tips -->
+                <div class="pro-tips" style="background: linear-gradient(90deg, rgba(253,199,12,0.08), rgba(169,203,46,0.08)); border-left: 4px solid var(--lime);">
+                    <h4 style="color: var(--dark-navy);">Pro Tips for States</h4>
+                    <ul style="color: var(--slate); font-size: 0.9rem;">
+                        <li><strong>Hover Transition:</strong> ใช้ <code>transition: all 0.2s ease;</code> สำหรับ smooth animation</li>
+                        <li><strong>Focus Ring:</strong> สำหรับ Accessibility ควรมี focus ring ที่ชัดเจน contrast ratio 3:1 ขึ้นไป</li>
+                        <li><strong>Disabled States:</strong> ไม่ควรใช้สีเทาอย่างเดียว ควร maintain brand color แต่ลด opacity</li>
+                        <li><strong>Dark Mode Hover:</strong> ใน Dark Mode ควรเพิ่ม brightness แทนที่จะลด เพราะ UI จะสว่างขึ้นเมื่อ interact</li>
+                    </ul>
+                </div>
+
+                <!-- Color Opacity Reference -->
+                <div class="pro-tips" style="background: rgba(39,134,194,0.08); border-left: 4px solid var(--blue); margin-top: 20px;">
+                    <h4 style="color: var(--dark-navy);">Opacity Reference (สำหรับ Background)</h4>
+                    <ul style="color: var(--slate); font-size: 0.9rem;">
+                        <li><strong>Light Mode Background:</strong> ใช้ opacity 10-15% ของ Primary color</li>
+                        <li><strong>Dark Mode Background:</strong> ใช้ opacity 15-20% ของ Primary color</li>
+                        <li><strong>Light Mode Border:</strong> ใช้ opacity 30% ของ Primary color</li>
+                        <li><strong>Dark Mode Border:</strong> ใช้ opacity 30-40% ของ Primary color</li>
+                        <li><strong>Shadow (Light):</strong> <code>rgba(color, 0.2)</code> สำหรับ subtle, <code>rgba(color, 0.3)</code> สำหรับ prominent</li>
+                        <li><strong>Glow (Dark):</strong> <code>rgba(color, 0.3)</code> สำหรับ subtle, <code>rgba(color, 0.4)</code> สำหรับ prominent</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Softnix Brand Guidelines 2026 — <a href="softnix-brand-guidelines-2026.html">Back to Main Guidelines</a></p>
+    </footer>
+</body>
+</html>

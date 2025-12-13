@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Usage Guide — Softnix Brand Guidelines 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Brand Colors - from Logo */
+            --softnix-orange: #F3903F;
+            --softnix-yellow: #FDC70C;
+            --softnix-lime: #A9CB2E;
+            --softnix-blue: #2786C2;
+
+            /* Extended Palette */
+            --softnix-orange-light: #F9B77A;
+            --softnix-orange-dark: #D67020;
+            --softnix-yellow-light: #FEE066;
+            --softnix-yellow-dark: #D4A600;
+            --softnix-lime-light: #C4DD6B;
+            --softnix-lime-dark: #7FA31E;
+            --softnix-blue-light: #5EADD6;
+            --softnix-blue-dark: #1A5A8A;
+
+            /* Neutral Colors */
+            --dark-navy: #0D1B2A;
+            --charcoal: #1B263B;
+            --slate: #415A77;
+            --light-slate: #778DA9;
+            --off-white: #F8F9FA;
+            --pure-white: #FFFFFF;
+
+            /* Gradients */
+            --gradient-sunrise: linear-gradient(135deg, var(--softnix-orange) 0%, var(--softnix-yellow) 100%);
+            --gradient-nature: linear-gradient(135deg, var(--softnix-lime) 0%, var(--softnix-blue) 100%);
+            --gradient-full: linear-gradient(135deg, var(--softnix-orange) 0%, var(--softnix-yellow) 33%, var(--softnix-lime) 66%, var(--softnix-blue) 100%);
+            --gradient-dark: linear-gradient(180deg, var(--dark-navy) 0%, var(--charcoal) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: var(--off-white);
+            color: var(--dark-navy);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: var(--dark-navy);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .header h1 span {
+            background: var(--gradient-full);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            color: var(--light-slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        /* Navigation */
+        .nav-section {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 40px;
+            position: sticky;
+            top: 60px;
+            z-index: 99;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--slate);
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .nav-link:hover {
+            background: var(--softnix-blue);
+            color: white;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--slate);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gradient-dark);
+            color: var(--pure-white);
+            padding: 60px 40px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            color: var(--light-slate);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--slate);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1>Slide Usage Guide <span>Softnix</span></h1>
+            <a href="softnix-brand-guidelines-2026.html" class="back-link">
+                ← Back to Brand Guidelines
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-section">
+        <div class="nav-content">
+            <a href="#downloads" class="nav-link">Background Downloads</a>
+            <a href="#dark-theme" class="nav-link">Dark Theme</a>
+            <a href="#light-theme" class="nav-link">Light Theme</a>
+            <a href="#typography" class="nav-link">Typography</a>
+            <a href="#chart-colors" class="nav-link">Chart Colors</a>
+            <a href="#best-practices" class="nav-link">Best Practices</a>
+            <a href="designer-reference.html" class="nav-link" style="background: var(--gradient-full); color: white;">Designer Reference →</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 class="section-title">Slide Usage</h2>
+        <p class="section-subtitle">แนวทางการออกแบบ Slide/Powerpoint สำหรับการนำเสนอ</p>
+
+        <!-- Download Section - All Backgrounds -->
+        <div id="downloads" style="margin-bottom: 40px;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin-bottom: 25px; color: var(--dark-navy);">
+                Download Slide Backgrounds — ดาวน์โหลดภาพพื้นหลัง</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+                <!-- Dark Theme -->
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <div style="aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid #eee;">
+                        <img src="images/slide_bg_dark.png" alt="Dark Theme Background" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--dark-navy); margin-bottom: 5px;">
+                                Dark Theme</h4>
+                            <p style="font-size: 0.85rem; color: var(--slate);">Dark Navy Gradient</p>
+                        </div>
+                        <a href="images/slide_bg_dark.png" download class="nav-btn" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--dark-navy); color: white; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.9rem; transition: all 0.2s;">
+                            <span>📥</span> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dark Theme (Side Color) -->
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <div style="aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid #eee;">
+                        <img src="images/slide_bg_dark_sidecolor.png" alt="Dark Theme Side Color Background" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--dark-navy); margin-bottom: 5px;">
+                                Dark Theme (Side Color)</h4>
+                            <p style="font-size: 0.85rem; color: var(--slate);">Dark Navy with Side Accent</p>
+                        </div>
+                        <a href="images/slide_bg_dark_sidecolor.png" download class="nav-btn" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--dark-navy); color: white; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.9rem; transition: all 0.2s;">
+                            <span>📥</span> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Light Theme -->
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <div style="aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid #eee;">
+                        <img src="images/slide_bg_light.png" alt="Light Theme Background" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--dark-navy); margin-bottom: 5px;">
+                                Light Theme</h4>
+                            <p style="font-size: 0.85rem; color: var(--slate);">Clean White/Grey Gradient</p>
+                        </div>
+                        <a href="images/slide_bg_light.png" download class="nav-btn" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--softnix-blue); color: white; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.9rem; transition: all 0.2s;">
+                            <span>📥</span> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Light Theme (Side Color) -->
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border: 1px solid #eee;">
+                    <div style="aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid #eee;">
+                        <img src="images/slide_bg_light_sidecolor.png" alt="Light Theme Side Color Background" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--dark-navy); margin-bottom: 5px;">
+                                Light Theme (Side Color)</h4>
+                            <p style="font-size: 0.85rem; color: var(--slate);">Light with Side Accent</p>
+                        </div>
+                        <a href="images/slide_bg_light_sidecolor.png" download class="nav-btn" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--softnix-blue); color: white; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.9rem; transition: all 0.2s;">
+                            <span>📥</span> Download
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slide Layouts -->
+        <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin-bottom: 25px; color: var(--dark-navy);">
+            Slide Layouts — รูปแบบ Slide มาตรฐาน</h3>
+
+        <!-- Dark Theme Slides -->
+        <div id="dark-theme" style="margin-bottom: 40px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin-bottom: 20px; color: var(--dark-navy); display: flex; align-items: center; gap: 10px;">
+                <span style="background: var(--dark-navy); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem;">Dark Theme</span>
+            </h4>
+
+            <!-- Gradient Background Options -->
+            <div style="background: rgba(13,27,42,0.04); border-radius: 12px; padding: 25px; margin-bottom: 30px; border: 1px solid #e8e8e8;">
+                <h5 style="font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: var(--dark-navy); margin-bottom: 20px; font-weight: 600;">
+                    📐 Gradient Background Options — เลือกลาย Gradient สำหรับ Dark Theme</h5>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+                    <!-- Option 1: Subtle Gradient -->
+                    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div style="background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #0F2238 100%); padding: 25px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center; color: white;">
+                                <div style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 8px;">Subtle Gradient</div>
+                                <div style="font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600;">ไล่เบา ดูมืด</div>
+                            </div>
+                        </div>
+                        <div style="padding: 12px 15px; background: #f5f5f5; font-family: monospace; font-size: 0.75rem; color: #555; word-break: break-all;">
+                            linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #0F2238 100%)
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Bold Gradient with Accent -->
+                    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div style="background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #0F3A52 100%); padding: 25px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -40%; right: -30%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(39,134,194,0.2) 0%, transparent 70%); filter: blur(30px);"></div>
+                            <div style="text-align: center; color: white; position: relative; z-index: 1;">
+                                <div style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 8px;">Bold with Accent</div>
+                                <div style="font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600;">ลึกกว่า + Glow</div>
+                            </div>
+                        </div>
+                        <div style="padding: 12px 15px; background: #f5f5f5; font-family: monospace; font-size: 0.75rem; color: #555; word-break: break-all;">
+                            linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #0F3A52 100%) + Radial Glow
+                        </div>
+                    </div>
+
+                    <!-- Option 3: Vibrant Gradient -->
+                    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                        <div style="background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 30%, #0F3A52 100%); padding: 25px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                            <div style="position: absolute; bottom: -40%; left: -20%; width: 280px; height: 280px; background: radial-gradient(circle, rgba(243,144,63,0.25) 0%, transparent 70%); filter: blur(40px);"></div>
+                            <div style="text-align: center; color: white; position: relative; z-index: 1;">
+                                <div style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 8px;">Vibrant Accent</div>
+                                <div style="font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600;">สดใส Orange Glow</div>
+                            </div>
+                        </div>
+                        <div style="padding: 12px 15px; background: #f5f5f5; font-family: monospace; font-size: 0.75rem; color: #555; word-break: break-all;">
+                            linear-gradient(135deg, #0D1B2A, #1B263B, #0F3A52) + Orange Glow
+                        </div>
+                    </div>
+
+                </div>
+                <div style="margin-top: 15px; padding: 12px; background: rgba(243,144,63,0.08); border-radius: 8px; border-left: 3px solid #F3903F;">
+                    <p style="font-size: 0.85rem; color: var(--dark-navy); margin: 0; font-weight: 500;">💡 Tip: ใช้ Subtle Gradient สำหรับ Content Slide เพื่อให้ Text อ่านง่าย ใช้ Bold/Vibrant สำหรับ Title หรือ Section Divider เพื่อสดใจ</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+
+                <!-- Title Slide -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 30px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: -30%; right: -20%; width: 200px; height: 200px; background: linear-gradient(135deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); border-radius: 50%; opacity: 0.15; filter: blur(40px);"></div>
+                        <img src="Logo Softnix White.png" alt="Softnix Logo" style="height: 45px; width: auto; margin-bottom: 12px; position: relative; z-index: 1;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 5px; position: relative; z-index: 1;">Presentation Title</div>
+                        <div style="font-size: 0.7rem; color: #778DA9; position: relative; z-index: 1;">Subtitle or Date</div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Title Slide — หน้าปก</p>
+                </div>
+
+                <!-- Section Divider -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 30px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
+                        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: linear-gradient(180deg, #F3903F, #FDC70C, #A9CB2E, #2786C2);"></div>
+                        <div style="padding-left: 20px;">
+                            <div style="font-size: 0.65rem; color: #F3903F; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px;">SECTION 01</div>
+                            <div style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 700; color: white;">Section Title</div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Section Divider — หน้าแบ่ง Section</p>
+                </div>
+
+                <!-- Content Slide -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 15px;">Content Title</div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #F3903F; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; flex: 1;"></div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #FDC70C; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; width: 80%;"></div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #A9CB2E; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; width: 90%;"></div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #2786C2; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: rgba(255,255,255,0.3); border-radius: 4px; width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Content Slide — หน้าเนื้อหา</p>
+                </div>
+
+                <!-- Two Column -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 12px;">Two Column Layout</div>
+                        <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div style="background: rgba(243,144,63,0.1); border-radius: 6px; padding: 10px; border-left: 3px solid #F3903F;">
+                                <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; width: 60%; margin-bottom: 6px;"></div>
+                                <div style="height: 5px; background: rgba(255,255,255,0.2); border-radius: 3px; width: 90%; margin-bottom: 4px;"></div>
+                                <div style="height: 5px; background: rgba(255,255,255,0.2); border-radius: 3px; width: 80%;"></div>
+                            </div>
+                            <div style="background: rgba(39,134,194,0.1); border-radius: 6px; padding: 10px; border-left: 3px solid #2786C2;">
+                                <div style="height: 6px; background: rgba(255,255,255,0.4); border-radius: 3px; width: 70%; margin-bottom: 6px;"></div>
+                                <div style="height: 5px; background: rgba(255,255,255,0.2); border-radius: 3px; width: 85%; margin-bottom: 4px;"></div>
+                                <div style="height: 5px; background: rgba(255,255,255,0.2); border-radius: 3px; width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Two Column — แบ่ง 2 คอลัมน์</p>
+                </div>
+
+                <!-- Image Focus -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: grid; grid-template-columns: 1fr 1.2fr; gap: 15px; align-items: center;">
+                        <div>
+                            <div style="font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; color: white; margin-bottom: 8px;">Image Focus</div>
+                            <div style="height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; width: 90%; margin-bottom: 5px;"></div>
+                            <div style="height: 5px; background: rgba(255,255,255,0.2); border-radius: 3px; width: 80%;"></div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, rgba(243,144,63,0.3), rgba(39,134,194,0.3)); border-radius: 8px; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <svg width="30" height="30" fill="#778DA9" viewBox="0 0 24 24">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Image Focus — เน้นรูปภาพ</p>
+                </div>
+
+                <!-- Quote Slide -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 25px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative;">
+                        <div style="font-size: 2rem; color: #F3903F; font-family: Georgia, serif; line-height: 1;">"</div>
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 500; color: white; font-style: italic; margin: 8px 0;">Your inspiring quote goes here</div>
+                        <div style="font-size: 0.65rem; color: #778DA9; margin-top: 5px;">— Speaker Name</div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Quote Slide — หน้า Quote</p>
+                </div>
+
+                <!-- Data/Chart Slide -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: white; margin-bottom: 12px;">Data & Charts</div>
+                        <div style="flex: 1; display: flex; align-items: flex-end; gap: 12px; padding: 10px 0;">
+                            <div style="flex: 1; background: #F3903F; border-radius: 4px 4px 0 0; height: 60%;"></div>
+                            <div style="flex: 1; background: #FDC70C; border-radius: 4px 4px 0 0; height: 80%;"></div>
+                            <div style="flex: 1; background: #A9CB2E; border-radius: 4px 4px 0 0; height: 45%;"></div>
+                            <div style="flex: 1; background: #2786C2; border-radius: 4px 4px 0 0; height: 70%;"></div>
+                            <div style="flex: 1; background: #F3903F; border-radius: 4px 4px 0 0; height: 55%;"></div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Data/Chart — หน้าแสดงข้อมูล</p>
+                </div>
+
+                <!-- Thank You Slide -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%); border-radius: 8px; padding: 30px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden;">
+                        <div style="position: absolute; bottom: -20%; left: -10%; width: 150px; height: 150px; background: linear-gradient(135deg, #F3903F, #2786C2); border-radius: 50%; opacity: 0.2; filter: blur(30px);"></div>
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 700; background: linear-gradient(90deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Thank You</div>
+                        <div style="font-size: 0.65rem; color: #778DA9; margin-top: 10px;">contact@softnix.ai</div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Thank You — หน้าปิด</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Light Theme Slides -->
+        <div id="light-theme" style="margin-bottom: 40px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin-bottom: 20px; color: var(--dark-navy); display: flex; align-items: center; gap: 10px;">
+                <span style="background: var(--off-white); color: var(--dark-navy); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; border: 1px solid #e0e0e0;">Light Theme</span>
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+
+                <!-- Title Slide Light -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #F8F9FA; border-radius: 8px; padding: 30px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; border: 1px solid #e8e8e8;">
+                        <div style="position: absolute; top: -30%; right: -20%; width: 200px; height: 200px; background: linear-gradient(135deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); border-radius: 50%; opacity: 0.1; filter: blur(40px);"></div>
+                        <img src="Logo Softnix.png" alt="Softnix Logo" style="height: 45px; width: auto; margin-bottom: 12px; position: relative; z-index: 1;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: #0D1B2A; margin-bottom: 5px; position: relative; z-index: 1;">Presentation Title</div>
+                        <div style="font-size: 0.7rem; color: #778DA9; position: relative; z-index: 1;">Subtitle or Date</div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Title Slide — Light</p>
+                </div>
+
+                <!-- Content Slide Light -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #F8F9FA; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column; border: 1px solid #e8e8e8;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: #0D1B2A; margin-bottom: 15px;">Content Title</div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #F3903F; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: #e0e0e0; border-radius: 4px; flex: 1;"></div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #FDC70C; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: #e0e0e0; border-radius: 4px; width: 80%;"></div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 6px; height: 6px; background: #A9CB2E; border-radius: 50%;"></div>
+                                <div style="height: 8px; background: #e0e0e0; border-radius: 4px; width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Content Slide — Light</p>
+                </div>
+
+                <!-- Two Column Light -->
+                <div style="background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <div style="background: #F8F9FA; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column; border: 1px solid #e8e8e8;">
+                        <div style="font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: #0D1B2A; margin-bottom: 12px;">Two Column Layout</div>
+                        <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div style="background: white; border-radius: 6px; padding: 10px; border-left: 3px solid #F3903F; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                                <div style="height: 6px; background: #d0d0d0; border-radius: 3px; width: 60%; margin-bottom: 6px;"></div>
+                                <div style="height: 5px; background: #e8e8e8; border-radius: 3px; width: 90%;"></div>
+                            </div>
+                            <div style="background: white; border-radius: 6px; padding: 10px; border-left: 3px solid #2786C2; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                                <div style="height: 6px; background: #d0d0d0; border-radius: 3px; width: 70%; margin-bottom: 6px;"></div>
+                                <div style="height: 5px; background: #e8e8e8; border-radius: 3px; width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.8rem; color: var(--slate); margin-top: 12px; font-weight: 500;">Two Column — Light</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography for Slides -->
+        <div id="typography" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 25px; color: var(--dark-navy);">
+                Typography สำหรับ Slide</h4>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background: var(--off-white);">
+                            <th style="padding: 15px; text-align: left; font-family: 'Poppins', sans-serif; color: var(--dark-navy); border-bottom: 2px solid #e0e0e0;">Element</th>
+                            <th style="padding: 15px; text-align: left; font-family: 'Poppins', sans-serif; color: var(--dark-navy); border-bottom: 2px solid #e0e0e0;">Font</th>
+                            <th style="padding: 15px; text-align: left; font-family: 'Poppins', sans-serif; color: var(--dark-navy); border-bottom: 2px solid #e0e0e0;">Size (PPT)</th>
+                            <th style="padding: 15px; text-align: left; font-family: 'Poppins', sans-serif; color: var(--dark-navy); border-bottom: 2px solid #e0e0e0;">Weight</th>
+                            <th style="padding: 15px; text-align: left; font-family: 'Poppins', sans-serif; color: var(--dark-navy); border-bottom: 2px solid #e0e0e0;">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600; color: var(--dark-navy);">Main Title</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Poppins</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: monospace; color: var(--slate);">44-60 pt</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Bold (700)</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee;"><span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--dark-navy);">Main Title</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600; color: var(--dark-navy);">Section Title</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Poppins</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: monospace; color: var(--slate);">36-44 pt</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">SemiBold (600)</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee;"><span style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--dark-navy);">Section Title</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600; color: var(--dark-navy);">Subtitle</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Poppins</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: monospace; color: var(--slate);">24-28 pt</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Medium (500)</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee;"><span style="font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 1rem; color: var(--slate);">Subtitle Text</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600; color: var(--dark-navy);">Body Text</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Sarabun</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; font-family: monospace; color: var(--slate);">18-22 pt</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--slate);">Regular (400)</td>
+                            <td style="padding: 15px; border-bottom: 1px solid #eee;"><span style="font-family: 'Sarabun', sans-serif; font-weight: 400; font-size: 0.95rem; color: var(--slate);">Body text content</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px; font-weight: 600; color: var(--dark-navy);">Caption/Label</td>
+                            <td style="padding: 15px; color: var(--slate);">Sarabun</td>
+                            <td style="padding: 15px; font-family: monospace; color: var(--slate);">14-16 pt</td>
+                            <td style="padding: 15px; color: var(--slate);">Regular (400)</td>
+                            <td style="padding: 15px;"><span style="font-family: 'Sarabun', sans-serif; font-weight: 400; font-size: 0.8rem; color: var(--light-slate);">Caption text</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Chart Colors -->
+        <div id="chart-colors" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 40px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 25px; color: var(--dark-navy);">
+                Chart & Graph Colors</h4>
+            <p style="color: var(--slate); margin-bottom: 20px; font-size: 0.95rem;">ลำดับสีที่แนะนำสำหรับ Chart และ Graph ใน Slide</p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #F3903F; border-radius: 8px; margin-bottom: 8px;"></div>
+                    <div style="font-size: 0.75rem; color: var(--slate);">1st</div>
+                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--light-slate);">#F3903F</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #2786C2; border-radius: 8px; margin-bottom: 8px;"></div>
+                    <div style="font-size: 0.75rem; color: var(--slate);">2nd</div>
+                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--light-slate);">#2786C2</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #A9CB2E; border-radius: 8px; margin-bottom: 8px;"></div>
+                    <div style="font-size: 0.75rem; color: var(--slate);">3rd</div>
+                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--light-slate);">#A9CB2E</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #FDC70C; border-radius: 8px; margin-bottom: 8px;"></div>
+                    <div style="font-size: 0.75rem; color: var(--slate);">4th</div>
+                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--light-slate);">#FDC70C</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #778DA9; border-radius: 8px; margin-bottom: 8px;"></div>
+                    <div style="font-size: 0.75rem; color: var(--slate);">5th</div>
+                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--light-slate);">#778DA9</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: #1B263B; border-radius: 8px; margin-bottom: 8px;"></div>
+                    <div style="font-size: 0.75rem; color: var(--slate);">6th</div>
+                    <div style="font-size: 0.7rem; font-family: monospace; color: var(--light-slate);">#1B263B</div>
+                </div>
+            </div>
+
+            <div style="background: var(--off-white); border-radius: 10px; padding: 20px;">
+                <p style="font-size: 0.85rem; color: var(--slate); margin: 0;"><strong>Tip:</strong> สำหรับ Pie Chart ที่มีมากกว่า 4 ส่วน ให้ใช้ Opacity ที่แตกต่างกัน เช่น 100%, 80%, 60%, 40% ของสีหลัก</p>
+            </div>
+        </div>
+
+        <!-- Do's & Don'ts -->
+        <div id="best-practices">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 25px; color: var(--dark-navy);">
+                Do's & Don'ts — สำหรับ Slide Design</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                <div style="background: linear-gradient(135deg, rgba(169,203,46,0.1), rgba(169,203,46,0.05)); border-radius: 16px; padding: 30px; border: 1px solid rgba(169,203,46,0.3);">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <div style="width: 36px; height: 36px; background: var(--softnix-lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✓</div>
+                        <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--dark-navy); margin: 0;">Do's — ควรทำ</h4>
+                    </div>
+                    <ul style="color: var(--slate); font-size: 0.9rem; margin-left: 20px; line-height: 2;">
+                        <li>ใช้ขนาดตัวอักษรที่อ่านง่าย (ไม่ต่ำกว่า 18pt)</li>
+                        <li>มี White Space เพียงพอ ไม่แน่นเกินไป</li>
+                        <li>ใช้ Bullet Points แทนย่อหน้ายาว</li>
+                        <li>ใช้รูปภาพคุณภาพสูง (ความละเอียดเพียงพอ)</li>
+                        <li>รักษาความสม่ำเสมอของ Layout ตลอดทั้ง Deck</li>
+                        <li>ใช้ Accent Color เพื่อเน้นจุดสำคัญ</li>
+                        <li>มี Logo อยู่ในตำแหน่งที่สม่ำเสมอ</li>
+                        <li>ใช้ Contrast ที่ดีระหว่าง Text และ Background</li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(229,57,53,0.1), rgba(229,57,53,0.05)); border-radius: 16px; padding: 30px; border: 1px solid rgba(229,57,53,0.3);">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <div style="width: 36px; height: 36px; background: #E53935; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✕</div>
+                        <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: var(--dark-navy); margin: 0;">Don'ts — ไม่ควรทำ</h4>
+                    </div>
+                    <ul style="color: var(--slate); font-size: 0.9rem; margin-left: 20px; line-height: 2;">
+                        <li>ใส่ข้อความมากเกินไปในหนึ่ง Slide</li>
+                        <li>ใช้ Font หลายแบบเกินไป (เกิน 2 แบบ)</li>
+                        <li>ใช้ Animation มากเกินความจำเป็น</li>
+                        <li>ใช้รูปภาพที่ Pixelated หรือความละเอียดต่ำ</li>
+                        <li>ใช้สีที่ไม่ใช่ Brand Colors</li>
+                        <li>ใช้ Background ที่รกหรือมีลวดลายเยอะ</li>
+                        <li>ใช้ตัวอักษรสี Light บน Background สีอ่อน</li>
+                        <li>ใช้ Clipart หรือ Stock Image ที่ดูไม่ Professional</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pro Tips -->
+            <div style="background: linear-gradient(135deg, rgba(39,134,194,0.1), rgba(39,134,194,0.05)); border-radius: 16px; padding: 30px; margin-top: 30px; border-left: 4px solid #2786C2;">
+                <h5 style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">
+                    💡 Pro Tips สำหรับ Slide Design</h5>
+                <ul style="color: var(--slate); font-size: 0.9rem; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Rule of 6:</strong> ไม่ควรมีเกิน 6 Bullet Points ต่อ Slide และแต่ละ Bullet ไม่ควรเกิน 6 คำ</li>
+                    <li><strong>One Idea per Slide:</strong> หนึ่ง Slide ควรมีเพียงหนึ่ง Main Message</li>
+                    <li><strong>Visual Hierarchy:</strong> ใช้ขนาดและน้ำหนักของตัวอักษรเพื่อแสดงลำดับความสำคัญ</li>
+                    <li><strong>Aspect Ratio:</strong> ใช้ 16:9 เป็นมาตรฐาน เหมาะกับจอ Widescreen ทั่วไป</li>
+                    <li><strong>Export Quality:</strong> Export เป็น PDF หรือ PPTX คุณภาพสูงสำหรับการนำเสนอ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Softnix Brand Guidelines</h3>
+            <p>เอกสารนี้เป็นแนวทางในการใช้งานแบรนด์ Softnix อย่างถูกต้องและสม่ำเสมอ หากมีข้อสงสัยหรือต้องการความช่วยเหลือเพิ่มเติม กรุณาติดต่อทีม Marketing</p>
+            <div class="footer-brand">
+                © 2025 Softnix Technology Co., Ltd. — Complete Private AI Stack for Enterprise Thailand
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

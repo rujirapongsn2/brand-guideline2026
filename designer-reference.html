@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Quick Reference — Softnix Brand Guidelines 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Brand Colors - from Logo */
+            --softnix-orange: #F3903F;
+            --softnix-yellow: #FDC70C;
+            --softnix-lime: #A9CB2E;
+            --softnix-blue: #2786C2;
+
+            /* Extended Palette */
+            --softnix-orange-light: #F9B77A;
+            --softnix-orange-dark: #D67020;
+            --softnix-yellow-light: #FEE066;
+            --softnix-yellow-dark: #D4A600;
+            --softnix-lime-light: #C4DD6B;
+            --softnix-lime-dark: #7FA31E;
+            --softnix-blue-light: #5EADD6;
+            --softnix-blue-dark: #1A5A8A;
+
+            /* Neutral Colors */
+            --dark-navy: #0D1B2A;
+            --charcoal: #1B263B;
+            --slate: #415A77;
+            --light-slate: #778DA9;
+            --off-white: #F8F9FA;
+            --pure-white: #FFFFFF;
+
+            /* Gradients */
+            --gradient-sunrise: linear-gradient(135deg, var(--softnix-orange) 0%, var(--softnix-yellow) 100%);
+            --gradient-nature: linear-gradient(135deg, var(--softnix-lime) 0%, var(--softnix-blue) 100%);
+            --gradient-full: linear-gradient(135deg, var(--softnix-orange) 0%, var(--softnix-yellow) 33%, var(--softnix-lime) 66%, var(--softnix-blue) 100%);
+            --gradient-dark: linear-gradient(180deg, var(--dark-navy) 0%, var(--charcoal) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: var(--off-white);
+            color: var(--dark-navy);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: var(--dark-navy);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .header h1 span {
+            background: var(--gradient-full);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            color: var(--light-slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        /* Navigation */
+        .nav-section {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 40px;
+            position: sticky;
+            top: 60px;
+            z-index: 99;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--slate);
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .nav-link:hover {
+            background: var(--softnix-blue);
+            color: white;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-navy);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--slate);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gradient-dark);
+            color: var(--pure-white);
+            padding: 60px 40px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            color: var(--light-slate);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--slate);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1>Designer Quick Reference <span>Softnix</span></h1>
+            <a href="softnix-brand-guidelines-2026.html" class="back-link">
+                ← Back to Brand Guidelines
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-section">
+        <div class="nav-content">
+            <a href="#dimensions" class="nav-link">Slide Dimensions</a>
+            <a href="#colors" class="nav-link">Color Codes</a>
+            <a href="#gradients" class="nav-link">Gradients</a>
+            <a href="#fonts" class="nav-link">Fonts</a>
+            <a href="#logo" class="nav-link">Logo Placement</a>
+            <a href="#setup" class="nav-link">PowerPoint Setup</a>
+            <a href="slide-guide.html" class="nav-link" style="background: var(--gradient-full); color: white;">Slide Guide →</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 class="section-title">Designer Quick Reference</h2>
+        <p class="section-subtitle">คู่มือสำหรับนักออกแบบ — ค่าและโค้ดที่พร้อมใช้งานสำหรับการออกแบบ Slide ใน PowerPoint, Keynote หรือ Figma</p>
+
+        <!-- Slide Dimensions -->
+        <div id="dimensions" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                📐 Slide Dimensions — ขนาด Slide</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 10px;">Standard (16:9)</div>
+                    <div style="font-family: monospace; font-size: 0.9rem; color: var(--slate); line-height: 1.8;">
+                        <div>PowerPoint: <strong>13.33" × 7.5"</strong></div>
+                        <div>Pixels: <strong>1920 × 1080 px</strong></div>
+                        <div>Points: <strong>960 × 540 pt</strong></div>
+                    </div>
+                </div>
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 10px;">Widescreen (16:10)</div>
+                    <div style="font-family: monospace; font-size: 0.9rem; color: var(--slate); line-height: 1.8;">
+                        <div>PowerPoint: <strong>13.33" × 8.33"</strong></div>
+                        <div>Pixels: <strong>1920 × 1200 px</strong></div>
+                        <div>Points: <strong>960 × 600 pt</strong></div>
+                    </div>
+                </div>
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 10px;">Safe Margins</div>
+                    <div style="font-family: monospace; font-size: 0.9rem; color: var(--slate); line-height: 1.8;">
+                        <div>Top/Bottom: <strong>0.5" (48px)</strong></div>
+                        <div>Left/Right: <strong>0.75" (72px)</strong></div>
+                        <div>Logo Area: <strong>มุมล่างขวา</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Codes for Designers -->
+        <div id="colors" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                🎨 Color Codes — รหัสสีสำหรับ Copy</h4>
+
+            <!-- Background Colors -->
+            <div style="margin-bottom: 25px;">
+                <h5 style="font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">Background Colors</h5>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div style="background: #0D1B2A; border-radius: 10px; padding: 20px; color: white;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Dark Navy</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; opacity: 0.9;">
+                            HEX: #0D1B2A<br>
+                            RGB: 13, 27, 42<br>
+                            HSL: 213°, 53%, 11%
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('#0D1B2A')" style="margin-top: 10px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Copy HEX</button>
+                    </div>
+                    <div style="background: #1B263B; border-radius: 10px; padding: 20px; color: white;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Charcoal</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; opacity: 0.9;">
+                            HEX: #1B263B<br>
+                            RGB: 27, 38, 59<br>
+                            HSL: 219°, 37%, 17%
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('#1B263B')" style="margin-top: 10px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Copy HEX</button>
+                    </div>
+                    <div style="background: #F8F9FA; border-radius: 10px; padding: 20px; color: #0D1B2A; border: 1px solid #e0e0e0;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Off White</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; color: var(--slate);">
+                            HEX: #F8F9FA<br>
+                            RGB: 248, 249, 250<br>
+                            HSL: 210°, 17%, 98%
+                        </div>
+                        <button onclick="navigator.clipboard.writeText('#F8F9FA')" style="margin-top: 10px; background: #e8e8e8; border: none; color: #333; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Copy HEX</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accent Colors -->
+            <div style="margin-bottom: 25px;">
+                <h5 style="font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">Accent Colors (สำหรับ Highlight, Bullet, Border)</h5>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                    <div style="background: #F3903F; border-radius: 10px; padding: 15px; color: white; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Orange</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#F3903F</div>
+                        <div style="font-size: 0.75rem; opacity: 0.9;">RGB: 243, 144, 63</div>
+                    </div>
+                    <div style="background: #FDC70C; border-radius: 10px; padding: 15px; color: #0D1B2A; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Yellow</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#FDC70C</div>
+                        <div style="font-size: 0.75rem;">RGB: 253, 199, 12</div>
+                    </div>
+                    <div style="background: #A9CB2E; border-radius: 10px; padding: 15px; color: #0D1B2A; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Lime</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#A9CB2E</div>
+                        <div style="font-size: 0.75rem;">RGB: 169, 203, 46</div>
+                    </div>
+                    <div style="background: #2786C2; border-radius: 10px; padding: 15px; color: white; text-align: center;">
+                        <div style="font-weight: 600; font-size: 0.9rem;">Blue</div>
+                        <div style="font-family: monospace; font-size: 0.85rem; margin: 8px 0;">#2786C2</div>
+                        <div style="font-size: 0.75rem; opacity: 0.9;">RGB: 39, 134, 194</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Colors -->
+            <div>
+                <h5 style="font-size: 1rem; color: var(--dark-navy); margin-bottom: 15px;">Text Colors</h5>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: var(--off-white);">
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Element</th>
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Dark Theme</th>
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Light Theme</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Title Text</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">#FFFFFF</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">#0D1B2A</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Body Text</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">#E8E8E8 หรือ #F8F9FA</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">#1B263B หรือ #415A77</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Subtitle / Caption</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">#778DA9</td>
+                                <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">#778DA9</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; font-weight: 500;">Accent Text (Link, Highlight)</td>
+                                <td style="padding: 12px; font-family: monospace;">#F3903F หรือ Brand Color</td>
+                                <td style="padding: 12px; font-family: monospace;">#2786C2 หรือ Brand Color</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gradient Codes -->
+        <div id="gradients" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                🌈 Gradient Presets — ค่า Gradient พร้อมใช้</h4>
+
+            <div style="display: grid; gap: 20px;">
+                <!-- Sunrise Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div style="width: 120px; height: 60px; background: linear-gradient(90deg, #F3903F, #FDC70C); border-radius: 8px;"></div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Sunrise Gradient</div>
+                            <div style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(90deg, #F3903F 0%, #FDC70C 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>PowerPoint:</strong> Gradient Fill → Type: Linear → Angle: 0° → Stop 1: #F3903F → Stop 2: #FDC70C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nature Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div style="width: 120px; height: 60px; background: linear-gradient(90deg, #A9CB2E, #2786C2); border-radius: 8px;"></div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Nature Gradient</div>
+                            <div style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(90deg, #A9CB2E 0%, #2786C2 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>PowerPoint:</strong> Gradient Fill → Type: Linear → Angle: 0° → Stop 1: #A9CB2E → Stop 2: #2786C2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Brand Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div style="width: 120px; height: 60px; background: linear-gradient(90deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); border-radius: 8px;"></div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Full Brand Gradient (4 สี)</div>
+                            <div style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(90deg, #F3903F 0%, #FDC70C 33%, #A9CB2E 66%, #2786C2 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>PowerPoint:</strong> Gradient Fill → Type: Linear → Angle: 0° → 4 Stops ตามลำดับ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Bar Gradient -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                        <div style="width: 8px; height: 60px; background: linear-gradient(180deg, #F3903F, #FDC70C, #A9CB2E, #2786C2); border-radius: 4px;"></div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 8px;">Accent Bar (แนวตั้ง)</div>
+                            <div style="font-family: monospace; font-size: 0.8rem; color: var(--slate); background: #e8e8e8; padding: 10px; border-radius: 6px; word-break: break-all;">
+                                linear-gradient(180deg, #F3903F 0%, #FDC70C 33%, #A9CB2E 66%, #2786C2 100%)
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--slate); margin-top: 8px;">
+                                <strong>ใช้สำหรับ:</strong> Accent bar ด้านข้าง Slide, Border ของ Card, Divider line
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Font Settings -->
+        <div id="fonts" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                🔤 Font Settings — การตั้งค่า Font</h4>
+
+            <div style="background: linear-gradient(135deg, rgba(243,144,63,0.1), rgba(243,144,63,0.05)); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #F3903F;">
+                <h5 style="font-size: 0.95rem; color: var(--dark-navy); margin-bottom: 10px;">📥 Download Fonts</h5>
+                <ul style="color: var(--slate); font-size: 0.9rem; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Poppins:</strong> <a href="https://fonts.google.com/specimen/Poppins" target="_blank" style="color: #2786C2;">Google Fonts - Poppins</a> (สำหรับ Heading)</li>
+                    <li><strong>Sarabun:</strong> <a href="https://fonts.google.com/specimen/Sarabun" target="_blank" style="color: #2786C2;">Google Fonts - Sarabun</a> (สำหรับ Body Text ภาษาไทย)</li>
+                </ul>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background: var(--off-white);">
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Element</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Font Family</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Size (pt)</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Weight</th>
+                            <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e0e0e0;">Line Height</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Main Title</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">44 - 60 pt</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Bold (700)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Section Title</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">36 - 44 pt</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">SemiBold (600)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Slide Title</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">28 - 36 pt</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">SemiBold (600)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.3</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Subtitle</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Poppins</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">20 - 24 pt</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Medium (500)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.4</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Body Text</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Sarabun</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">18 - 22 pt</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Regular (400)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.5</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-weight: 500;">Bullet Points</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Sarabun</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee; font-family: monospace;">16 - 20 pt</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">Regular (400)</td>
+                            <td style="padding: 12px; border-bottom: 1px solid #eee;">1.6</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; font-weight: 500;">Caption / Footer</td>
+                            <td style="padding: 12px;">Sarabun</td>
+                            <td style="padding: 12px; font-family: monospace;">12 - 14 pt</td>
+                            <td style="padding: 12px;">Regular (400)</td>
+                            <td style="padding: 12px;">1.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Logo Placement -->
+        <div id="logo" style="background: white; border-radius: 16px; padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px; color: var(--dark-navy);">
+                📍 Logo Placement — ตำแหน่งโลโก้</h4>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <!-- Title Slide Logo -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 15px;">Title Slide</div>
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
+                        <div style="border: 2px dashed #F3903F; border-radius: 8px; padding: 10px 20px;">
+                            <img src="Logo Softnix White.png" alt="Logo" style="height: 25px; width: auto;">
+                        </div>
+                        <div style="font-size: 0.6rem; color: #778DA9; margin-top: 8px;">ตรงกลาง ด้านบน</div>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--slate); margin-top: 12px;">
+                        <strong>ขนาด:</strong> Height 60-80px<br>
+                        <strong>ตำแหน่ง:</strong> Center, ห่างจากขอบบน 15%
+                    </div>
+                </div>
+
+                <!-- Content Slide Logo -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 15px;">Content Slide</div>
+                    <div style="background: #0D1B2A; border-radius: 8px; padding: 20px; aspect-ratio: 16/9; display: flex; flex-direction: column; position: relative;">
+                        <div style="flex: 1;"></div>
+                        <div style="display: flex; justify-content: flex-end;">
+                            <div style="border: 2px dashed #F3903F; border-radius: 6px; padding: 5px 10px;">
+                                <img src="Logo Softnix White.png" alt="Logo" style="height: 15px; width: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--slate); margin-top: 12px;">
+                        <strong>ขนาด:</strong> Height 30-40px<br>
+                        <strong>ตำแหน่ง:</strong> มุมล่างขวา, ห่างจากขอบ 0.5"
+                    </div>
+                </div>
+
+                <!-- Logo Files -->
+                <div style="background: var(--off-white); border-radius: 12px; padding: 20px;">
+                    <div style="font-weight: 600; color: var(--dark-navy); margin-bottom: 15px;">Logo Files</div>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="background: #0D1B2A; border-radius: 8px; padding: 15px; display: flex; align-items: center; gap: 12px;">
+                            <img src="Logo Softnix White.png" alt="Logo White" style="height: 25px; width: auto;">
+                            <div>
+                                <div style="font-size: 0.8rem; color: white; font-weight: 500;">Dark Background</div>
+                                <div style="font-size: 0.7rem; color: #778DA9; font-family: monospace;">Logo Softnix White.png</div>
+                            </div>
+                        </div>
+                        <div style="background: white; border-radius: 8px; padding: 15px; display: flex; align-items: center; gap: 12px; border: 1px solid #e0e0e0;">
+                            <img src="Logo Softnix.png" alt="Logo" style="height: 25px; width: auto;">
+                            <div>
+                                <div style="font-size: 0.8rem; color: var(--dark-navy); font-weight: 500;">Light Background</div>
+                                <div style="font-size: 0.7rem; color: var(--slate); font-family: monospace;">Logo Softnix.png</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PowerPoint Quick Setup -->
+        <div id="setup" style="background: linear-gradient(135deg, #0D1B2A, #1B263B); border-radius: 16px; padding: 35px; color: white;">
+            <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 20px;">⚡ PowerPoint Quick Setup</h4>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div>
+                    <h5 style="color: #F3903F; font-size: 0.95rem; margin-bottom: 12px;">1. ตั้งค่า Slide Size</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>Design → Slide Size → Widescreen (16:9)</li>
+                        <li>หรือ Custom: 13.33" × 7.5"</li>
+                    </ol>
+                </div>
+                <div>
+                    <h5 style="color: #FDC70C; font-size: 0.95rem; margin-bottom: 12px;">2. ตั้งค่า Theme Colors</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>Design → Variants → Colors → Customize</li>
+                        <li>ใส่ค่า HEX ตาม Brand Colors</li>
+                    </ol>
+                </div>
+                <div>
+                    <h5 style="color: #A9CB2E; font-size: 0.95rem; margin-bottom: 12px;">3. ตั้งค่า Theme Fonts</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>Design → Variants → Fonts → Customize</li>
+                        <li>Heading: Poppins, Body: Sarabun</li>
+                    </ol>
+                </div>
+                <div>
+                    <h5 style="color: #2786C2; font-size: 0.95rem; margin-bottom: 12px;">4. ใส่ Logo ใน Master Slide</h5>
+                    <ol style="color: #e8e8e8; font-size: 0.85rem; margin-left: 20px; line-height: 1.8;">
+                        <li>View → Slide Master</li>
+                        <li>Insert → Picture → เลือก Logo ที่เหมาะสม</li>
+                        <li>วางมุมล่างขวา, ปรับขนาด 30-40px</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                <div style="font-weight: 600; margin-bottom: 10px;">💾 Save as Template</div>
+                <div style="font-size: 0.85rem; color: #e8e8e8;">
+                    หลังตั้งค่าเสร็จ ให้บันทึกเป็น Template: <strong>File → Save As → PowerPoint Template (.potx)</strong><br>
+                    ตั้งชื่อ: <span style="font-family: monospace; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px;">Softnix-Brand-Template-2026.potx</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Softnix Brand Guidelines</h3>
+            <p>เอกสารนี้เป็นแนวทางในการใช้งานแบรนด์ Softnix อย่างถูกต้องและสม่ำเสมอ หากมีข้อสงสัยหรือต้องการความช่วยเหลือเพิ่มเติม กรุณาติดต่อทีม Marketing</p>
+            <div class="footer-brand">
+                © 2025 Softnix Technology Co., Ltd. — Complete Private AI Stack for Enterprise Thailand
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
