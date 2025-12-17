@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI Components Guide — Softnix Brand Guidelines 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* Primary Colors */
@@ -31,7 +34,12 @@
             --info: #2786C2;
 
             /* Gradients */
-            --gradient-l2: linear-gradient(90deg, #FDC70C, #A9CB2E);
+            /* Layer 3: Yellow-Lime */
+            --gradient-l3: linear-gradient(135deg, #FDC70C 0%, #A9CB2E 100%);
+            /* Layer 2: Orange */
+            --gradient-l2: linear-gradient(135deg, #F3903F 0%, #D67020 100%);
+            /* Layer 1: Blue */
+            --gradient-l1: linear-gradient(135deg, #2786C2 0%, #1A5A8A 100%);
         }
 
         * {
@@ -54,7 +62,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .header-content {
@@ -165,12 +173,12 @@
 
         .mode-section.light {
             background: var(--pure-white);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .mode-section.dark {
             background: var(--dark-navy);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .mode-badge {
@@ -188,7 +196,7 @@
         }
 
         .mode-badge.dark {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
         }
 
@@ -266,7 +274,7 @@
         }
 
         .component-code.dark {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: #aaa;
         }
 
@@ -288,7 +296,7 @@
 
         .demo-input.dark {
             background: var(--dark-navy);
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             color: white;
         }
 
@@ -362,7 +370,7 @@
             top: 3px;
             left: 3px;
             transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .demo-toggle.on::after {
@@ -397,7 +405,7 @@
         }
 
         .demo-tabs.dark {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .demo-tab {
@@ -447,7 +455,7 @@
         }
 
         .demo-page.dark {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: var(--light-slate);
         }
 
@@ -562,7 +570,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Skeleton */
@@ -578,14 +588,19 @@
         }
 
         .demo-skeleton.dark {
-            background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.1) 75%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.1) 75%);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
         }
 
         @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
         }
 
         /* States Reference Table */
@@ -656,15 +671,28 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
             <h1>UI Components <span>Guide</span></h1>
-            <a href="softnix-brand-guidelines-2026.html" class="back-link">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-                Back to Brand Guidelines
-            </a>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <a href="https://github.com/rujirapongsn2/brand-guideline2026.git" target="_blank"
+                    rel="noopener noreferrer" class="back-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.79 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    Download on GitHub
+                </a>
+                <a href="softnix-brand-guidelines-2026.html" class="back-link">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                    </svg>
+                    Back to Brand Guidelines
+                </a>
+            </div>
         </div>
     </header>
 
@@ -683,7 +711,8 @@
     <main class="container">
         <div class="section">
             <h1 class="section-title">UI Components Guide</h1>
-            <p class="section-subtitle">ตัวอย่าง UI Components พร้อมแนวทางการใช้สีตาม Product Layer สำหรับ Web Designer</p>
+            <p class="section-subtitle">ตัวอย่าง UI Components พร้อมแนวทางการใช้สีตาม Product Layer สำหรับ Web Designer
+            </p>
         </div>
 
         <!-- ============================================ -->
@@ -697,54 +726,60 @@
             <div class="mode-section light">
                 <span class="mode-badge light">Light Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products — AI-Ready Agents, DFlow
                     </h3>
                     <div class="component-grid">
                         <!-- Input Default -->
                         <div class="component-card light">
-                            <input type="text" class="demo-input light" placeholder="Enter your email..." style="border-color: #e0e0e0;">
+                            <input type="text" class="demo-input light" placeholder="Enter your email..."
+                                style="border-color: #e0e0e0;">
                             <p class="component-label light">Input Default</p>
                             <code class="component-code light">border: #e0e0e0</code>
                         </div>
                         <!-- Input Focus -->
                         <div class="component-card light">
-                            <input type="text" class="demo-input light" placeholder="Focused input" style="border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,144,63,0.15);">
+                            <input type="text" class="demo-input light" placeholder="Focused input"
+                                style="border-color: var(--lime); box-shadow: 0 0 0 3px rgba(169,203,46,0.15);">
                             <p class="component-label light">Input Focus</p>
-                            <code class="component-code light">border: #F3903F + shadow</code>
+                            <code class="component-code light">border: #A9CB2E + shadow</code>
                         </div>
                         <!-- Input Error -->
                         <div class="component-card light">
-                            <input type="text" class="demo-input light" value="Invalid input" style="border-color: var(--error); box-shadow: 0 0 0 3px rgba(229,57,53,0.15);">
+                            <input type="text" class="demo-input light" value="Invalid input"
+                                style="border-color: var(--error); box-shadow: 0 0 0 3px rgba(229,57,53,0.15);">
                             <p class="component-label light">Input Error</p>
                             <code class="component-code light">border: #E53935</code>
                         </div>
                         <!-- Input Success -->
                         <div class="component-card light">
-                            <input type="text" class="demo-input light" value="Valid input" style="border-color: var(--success); box-shadow: 0 0 0 3px rgba(169,203,46,0.15);">
+                            <input type="text" class="demo-input light" value="Valid input"
+                                style="border-color: var(--success); box-shadow: 0 0 0 3px rgba(169,203,46,0.15);">
                             <p class="component-label light">Input Success</p>
                             <code class="component-code light">border: #A9CB2E</code>
                         </div>
                         <!-- Checkbox -->
                         <div class="component-card light">
                             <div class="checkbox-wrapper">
-                                <div class="demo-checkbox" style="background: var(--orange);">
-                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                <div class="demo-checkbox" style="background: var(--gradient-l3);">
+                                    <svg width="14" height="14" fill="var(--dark-navy)" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
                                 </div>
                                 <span style="color: var(--dark-navy);">Checked</span>
                                 <div class="demo-checkbox" style="background: white; border: 2px solid #d0d0d0;"></div>
                                 <span style="color: var(--slate);">Unchecked</span>
                             </div>
                             <p class="component-label light">Checkbox</p>
-                            <code class="component-code light">bg: #F3903F</code>
+                            <code class="component-code light">bg: gradient</code>
                         </div>
                         <!-- Radio -->
                         <div class="component-card light">
                             <div class="checkbox-wrapper">
-                                <div class="demo-radio" style="background: var(--orange);">
+                                <div class="demo-radio" style="background: var(--gradient-l3);">
                                     <div class="demo-radio-inner"></div>
                                 </div>
                                 <span style="color: var(--dark-navy);">Selected</span>
@@ -752,44 +787,47 @@
                                 <span style="color: var(--slate);">Unselected</span>
                             </div>
                             <p class="component-label light">Radio Button</p>
-                            <code class="component-code light">bg: #F3903F</code>
+                            <code class="component-code light">bg: gradient</code>
                         </div>
                         <!-- Toggle -->
                         <div class="component-card light">
                             <div class="toggle-wrapper">
-                                <div class="demo-toggle on" style="background: var(--orange);"></div>
+                                <div class="demo-toggle on" style="background: var(--gradient-l3);"></div>
                                 <span style="color: var(--dark-navy);">ON</span>
                                 <div class="demo-toggle" style="background: #d0d0d0;"></div>
                                 <span style="color: var(--slate);">OFF</span>
                             </div>
                             <p class="component-label light">Toggle Switch</p>
-                            <code class="component-code light">bg: #F3903F</code>
+                            <code class="component-code light">bg: gradient</code>
                         </div>
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: #7FA31E;">
+                    <h3 class="layer-title" style="color: var(--orange);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products — Softnix GenAI, Softnix Logger
                     </h3>
                     <div class="component-grid">
                         <!-- Input Focus -->
                         <div class="component-card light">
-                            <input type="text" class="demo-input light" placeholder="Focused input" style="border-color: var(--lime); box-shadow: 0 0 0 3px rgba(169,203,46,0.15);">
+                            <input type="text" class="demo-input light" placeholder="Focused input"
+                                style="border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,144,63,0.15);">
                             <p class="component-label light">Input Focus</p>
-                            <code class="component-code light">border: #A9CB2E + shadow</code>
+                            <code class="component-code light">border: #F3903F + shadow</code>
                         </div>
                         <!-- Checkbox -->
                         <div class="component-card light">
                             <div class="checkbox-wrapper">
                                 <div class="demo-checkbox" style="background: var(--gradient-l2);">
-                                    <svg width="14" height="14" fill="var(--dark-navy)" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
                                 </div>
                                 <span style="color: var(--dark-navy);">Checked</span>
                             </div>
-                            <p class="component-label light">Checkbox (Gradient)</p>
+                            <p class="component-label light">Checkbox (Orange)</p>
                             <code class="component-code light">bg: gradient</code>
                         </div>
                         <!-- Toggle -->
@@ -798,7 +836,7 @@
                                 <div class="demo-toggle on" style="background: var(--gradient-l2);"></div>
                                 <span style="color: var(--dark-navy);">ON</span>
                             </div>
-                            <p class="component-label light">Toggle (Gradient)</p>
+                            <p class="component-label light">Toggle (Orange)</p>
                             <code class="component-code light">bg: gradient</code>
                         </div>
                     </div>
@@ -807,35 +845,38 @@
                 <!-- Layer 1 - Blue -->
                 <div class="layer-section">
                     <h3 class="layer-title" style="color: var(--blue);">
-                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l1);"></span>
                         Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
                     </h3>
                     <div class="component-grid">
                         <!-- Input Focus -->
                         <div class="component-card light">
-                            <input type="text" class="demo-input light" placeholder="Focused input" style="border-color: var(--blue); box-shadow: 0 0 0 3px rgba(39,134,194,0.15);">
+                            <input type="text" class="demo-input light" placeholder="Focused input"
+                                style="border-color: var(--blue); box-shadow: 0 0 0 3px rgba(39,134,194,0.15);">
                             <p class="component-label light">Input Focus</p>
                             <code class="component-code light">border: #2786C2 + shadow</code>
                         </div>
                         <!-- Checkbox -->
                         <div class="component-card light">
                             <div class="checkbox-wrapper">
-                                <div class="demo-checkbox" style="background: var(--blue);">
-                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                <div class="demo-checkbox" style="background: var(--gradient-l1);">
+                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
                                 </div>
                                 <span style="color: var(--dark-navy);">Checked</span>
                             </div>
                             <p class="component-label light">Checkbox</p>
-                            <code class="component-code light">bg: #2786C2</code>
+                            <code class="component-code light">bg: gradient</code>
                         </div>
                         <!-- Toggle -->
                         <div class="component-card light">
                             <div class="toggle-wrapper">
-                                <div class="demo-toggle on" style="background: var(--blue);"></div>
+                                <div class="demo-toggle on" style="background: var(--gradient-l1);"></div>
                                 <span style="color: var(--dark-navy);">ON</span>
                             </div>
                             <p class="component-label light">Toggle Switch</p>
-                            <code class="component-code light">bg: #2786C2</code>
+                            <code class="component-code light">bg: gradient</code>
                         </div>
                     </div>
                 </div>
@@ -845,10 +886,10 @@
             <div class="mode-section dark">
                 <span class="mode-badge dark">Dark Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange-light);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products — AI-Ready Agents, DFlow
                     </h3>
                     <div class="component-grid">
@@ -860,45 +901,49 @@
                         </div>
                         <!-- Input Focus -->
                         <div class="component-card dark">
-                            <input type="text" class="demo-input dark" placeholder="Focused input" style="border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,144,63,0.25);">
+                            <input type="text" class="demo-input dark" placeholder="Focused input"
+                                style="border-color: var(--lime); box-shadow: 0 0 0 3px rgba(169,203,46,0.25);">
                             <p class="component-label dark">Input Focus</p>
-                            <code class="component-code dark">border: #F3903F + glow</code>
+                            <code class="component-code dark">border: #A9CB2E + glow</code>
                         </div>
                         <!-- Checkbox -->
                         <div class="component-card dark">
                             <div class="checkbox-wrapper">
-                                <div class="demo-checkbox" style="background: var(--orange);">
-                                    <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                <div class="demo-checkbox" style="background: var(--gradient-l3);">
+                                    <svg width="14" height="14" fill="var(--dark-navy)" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                    </svg>
                                 </div>
                                 <span style="color: white;">Checked</span>
                             </div>
                             <p class="component-label dark">Checkbox</p>
-                            <code class="component-code dark">bg: #F3903F</code>
+                            <code class="component-code dark">bg: gradient</code>
                         </div>
                         <!-- Toggle -->
                         <div class="component-card dark">
                             <div class="toggle-wrapper">
-                                <div class="demo-toggle on" style="background: var(--orange);"></div>
+                                <div class="demo-toggle on" style="background: var(--gradient-l3);"></div>
                                 <span style="color: white;">ON</span>
                             </div>
                             <p class="component-label dark">Toggle Switch</p>
-                            <code class="component-code dark">bg: #F3903F</code>
+                            <code class="component-code dark">bg: gradient</code>
                         </div>
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--lime-light);">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products — Softnix GenAI, Softnix Logger
                     </h3>
                     <div class="component-grid">
                         <!-- Input Focus -->
                         <div class="component-card dark">
-                            <input type="text" class="demo-input dark" placeholder="Focused input" style="border-color: var(--lime); box-shadow: 0 0 0 3px rgba(169,203,46,0.25);">
-                            <p class="component-label dark">Input Focus (Gradient Glow)</p>
-                            <code class="component-code dark">border: #A9CB2E</code>
+                            <input type="text" class="demo-input dark" placeholder="Focused input"
+                                style="border-color: var(--orange); box-shadow: 0 0 0 3px rgba(243,144,63,0.25);">
+                            <p class="component-label dark">Input Focus (Orange Glow)</p>
+                            <code class="component-code dark">border: #F3903F</code>
                         </div>
                         <!-- Toggle -->
                         <div class="component-card dark">
@@ -906,7 +951,7 @@
                                 <div class="demo-toggle on" style="background: var(--gradient-l2);"></div>
                                 <span style="color: white;">ON</span>
                             </div>
-                            <p class="component-label dark">Toggle (Gradient)</p>
+                            <p class="component-label dark">Toggle (Orange)</p>
                             <code class="component-code dark">bg: gradient</code>
                         </div>
                     </div>
@@ -915,24 +960,25 @@
                 <!-- Layer 1 - Blue -->
                 <div class="layer-section">
                     <h3 class="layer-title" style="color: var(--blue-light);">
-                        <span class="layer-color-box" style="background: var(--blue);"></span>
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l1);"></span>
                         Layer 1 Products — Softnix Data Platform, Domain-Specific LLM
                     </h3>
                     <div class="component-grid">
                         <!-- Input Focus -->
                         <div class="component-card dark">
-                            <input type="text" class="demo-input dark" placeholder="Focused input" style="border-color: var(--blue); box-shadow: 0 0 0 3px rgba(39,134,194,0.25);">
+                            <input type="text" class="demo-input dark" placeholder="Focused input"
+                                style="border-color: var(--blue); box-shadow: 0 0 0 3px rgba(39,134,194,0.25);">
                             <p class="component-label dark">Input Focus</p>
                             <code class="component-code dark">border: #2786C2 + glow</code>
                         </div>
                         <!-- Toggle -->
                         <div class="component-card dark">
                             <div class="toggle-wrapper">
-                                <div class="demo-toggle on" style="background: var(--blue);"></div>
+                                <div class="demo-toggle on" style="background: var(--gradient-l1);"></div>
                                 <span style="color: white;">ON</span>
                             </div>
                             <p class="component-label dark">Toggle Switch</p>
-                            <code class="component-code dark">bg: #2786C2</code>
+                            <code class="component-code dark">bg: gradient</code>
                         </div>
                     </div>
                 </div>
@@ -950,10 +996,10 @@
             <div class="mode-section light">
                 <span class="mode-badge light">Light Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products — AI-Ready Agents, DFlow
                     </h3>
                     <div class="component-grid">
@@ -986,29 +1032,34 @@
                         </div>
                         <!-- Alert Info -->
                         <div class="component-card light">
-                            <div class="demo-alert" style="background: rgba(243,144,63,0.1); color: var(--orange);">
+                            <div class="demo-alert" style="background: rgba(169,203,46,0.1); color: #7FA31E;">
                                 <span class="alert-icon">ℹ</span>
                                 <span>New update available</span>
                             </div>
                             <p class="component-label light">Alert Info (Brand Color)</p>
-                            <code class="component-code light">bg: rgba(243,144,63,0.1)</code>
+                            <code class="component-code light">bg: rgba(169,203,46,0.1)</code>
                         </div>
                         <!-- Tooltip -->
                         <div class="component-card light">
-                            <div class="demo-tooltip" style="background: var(--orange); color: white;">
+                            <div class="demo-tooltip" style="background: var(--lime); color: var(--dark-navy);">
                                 Helpful tooltip text
-                                <style>.demo-tooltip[style*="F3903F"]::after { border-top: 6px solid var(--orange); }</style>
+                                <style>
+                                    .demo-tooltip[style*="A9CB2E"]::after {
+                                        border-top: 6px solid var(--lime);
+                                    }
+                                </style>
                             </div>
                             <p class="component-label light">Tooltip</p>
-                            <code class="component-code light">bg: #F3903F</code>
+                            <code class="component-code light">bg: #A9CB2E</code>
                         </div>
                         <!-- Spinner -->
                         <div class="component-card light">
                             <div style="display: flex; justify-content: center;">
-                                <div class="demo-spinner" style="border-color: rgba(243,144,63,0.2); border-top-color: var(--orange);"></div>
+                                <div class="demo-spinner"
+                                    style="border-color: rgba(169,203,46,0.2); border-top-color: var(--lime);"></div>
                             </div>
                             <p class="component-label light">Loading Spinner</p>
-                            <code class="component-code light">border: #F3903F</code>
+                            <code class="component-code light">border: #A9CB2E</code>
                         </div>
                         <!-- Skeleton -->
                         <div class="component-card light">
@@ -1023,25 +1074,26 @@
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: #7FA31E;">
+                    <h3 class="layer-title" style="color: var(--orange);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products — Softnix GenAI, Softnix Logger
                     </h3>
                     <div class="component-grid">
                         <!-- Alert Info Gradient -->
                         <div class="component-card light">
-                            <div class="demo-alert" style="background: linear-gradient(90deg, rgba(253,199,12,0.1), rgba(169,203,46,0.1)); color: #7FA31E;">
+                            <div class="demo-alert"
+                                style="background: linear-gradient(90deg, rgba(243,144,63,0.1), rgba(214,112,32,0.1)); color: var(--orange);">
                                 <span class="alert-icon">⚡</span>
                                 <span>AI is processing...</span>
                             </div>
-                            <p class="component-label light">Alert Info (Gradient)</p>
+                            <p class="component-label light">Alert Info (Orange)</p>
                             <code class="component-code light">bg: gradient 10%</code>
                         </div>
                         <!-- Tooltip Gradient -->
                         <div class="component-card light">
-                            <div class="demo-tooltip" style="background: var(--gradient-l2); color: var(--dark-navy);">
+                            <div class="demo-tooltip" style="background: var(--gradient-l2); color: white;">
                                 Gradient tooltip
                             </div>
                             <p class="component-label light">Tooltip (Gradient)</p>
@@ -1050,10 +1102,11 @@
                         <!-- Spinner -->
                         <div class="component-card light">
                             <div style="display: flex; justify-content: center;">
-                                <div class="demo-spinner" style="border-color: rgba(169,203,46,0.2); border-top-color: var(--lime);"></div>
+                                <div class="demo-spinner"
+                                    style="border-color: rgba(243,144,63,0.2); border-top-color: var(--orange);"></div>
                             </div>
                             <p class="component-label light">Loading Spinner</p>
-                            <code class="component-code light">border: #A9CB2E</code>
+                            <code class="component-code light">border: #F3903F</code>
                         </div>
                     </div>
                 </div>
@@ -1085,7 +1138,8 @@
                         <!-- Spinner -->
                         <div class="component-card light">
                             <div style="display: flex; justify-content: center;">
-                                <div class="demo-spinner" style="border-color: rgba(39,134,194,0.2); border-top-color: var(--blue);"></div>
+                                <div class="demo-spinner"
+                                    style="border-color: rgba(39,134,194,0.2); border-top-color: var(--blue);"></div>
                             </div>
                             <p class="component-label light">Loading Spinner</p>
                             <code class="component-code light">border: #2786C2</code>
@@ -1098,26 +1152,28 @@
             <div class="mode-section dark">
                 <span class="mode-badge dark">Dark Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange-light);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products
                     </h3>
                     <div class="component-grid">
                         <!-- Alert Info -->
                         <div class="component-card dark">
-                            <div class="demo-alert" style="background: rgba(243,144,63,0.15); color: var(--orange-light); border: 1px solid rgba(243,144,63,0.3);">
+                            <div class="demo-alert"
+                                style="background: rgba(169,203,46,0.15); color: var(--lime-light); border: 1px solid rgba(169,203,46,0.3);">
                                 <span class="alert-icon">ℹ</span>
                                 <span>New update available</span>
                             </div>
                             <p class="component-label dark">Alert Info</p>
-                            <code class="component-code dark">bg: rgba(243,144,63,0.15)</code>
+                            <code class="component-code dark">bg: rgba(169,203,46,0.15)</code>
                         </div>
                         <!-- Spinner -->
                         <div class="component-card dark">
                             <div style="display: flex; justify-content: center;">
-                                <div class="demo-spinner" style="border-color: rgba(243,144,63,0.3); border-top-color: var(--orange);"></div>
+                                <div class="demo-spinner"
+                                    style="border-color: rgba(169,203,46,0.3); border-top-color: var(--lime);"></div>
                             </div>
                             <p class="component-label dark">Loading Spinner</p>
                             <code class="component-code dark">glow effect</code>
@@ -1135,26 +1191,28 @@
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--lime-light);">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products
                     </h3>
                     <div class="component-grid">
                         <!-- Alert Gradient -->
                         <div class="component-card dark">
-                            <div class="demo-alert" style="background: linear-gradient(90deg, rgba(253,199,12,0.15), rgba(169,203,46,0.15)); color: var(--lime-light); border: 1px solid rgba(169,203,46,0.3);">
+                            <div class="demo-alert"
+                                style="background: linear-gradient(90deg, rgba(243,144,63,0.15), rgba(214,112,32,0.15)); color: var(--orange-light); border: 1px solid rgba(243,144,63,0.3);">
                                 <span class="alert-icon">⚡</span>
                                 <span>AI is ready</span>
                             </div>
-                            <p class="component-label dark">Alert (Gradient)</p>
+                            <p class="component-label dark">Alert (Orange)</p>
                             <code class="component-code dark">bg: gradient 15%</code>
                         </div>
                         <!-- Spinner -->
                         <div class="component-card dark">
                             <div style="display: flex; justify-content: center;">
-                                <div class="demo-spinner" style="border-color: rgba(169,203,46,0.3); border-top-color: var(--lime);"></div>
+                                <div class="demo-spinner"
+                                    style="border-color: rgba(243,144,63,0.3); border-top-color: var(--orange);"></div>
                             </div>
                             <p class="component-label dark">Loading Spinner</p>
                             <code class="component-code dark">glow effect</code>
@@ -1171,7 +1229,8 @@
                     <div class="component-grid">
                         <!-- Alert Blue -->
                         <div class="component-card dark">
-                            <div class="demo-alert" style="background: rgba(39,134,194,0.15); color: var(--blue-light); border: 1px solid rgba(39,134,194,0.3);">
+                            <div class="demo-alert"
+                                style="background: rgba(39,134,194,0.15); color: var(--blue-light); border: 1px solid rgba(39,134,194,0.3);">
                                 <span class="alert-icon">ℹ</span>
                                 <span>Data sync complete</span>
                             </div>
@@ -1181,7 +1240,8 @@
                         <!-- Spinner -->
                         <div class="component-card dark">
                             <div style="display: flex; justify-content: center;">
-                                <div class="demo-spinner" style="border-color: rgba(39,134,194,0.3); border-top-color: var(--blue);"></div>
+                                <div class="demo-spinner"
+                                    style="border-color: rgba(39,134,194,0.3); border-top-color: var(--blue);"></div>
                             </div>
                             <p class="component-label dark">Loading Spinner</p>
                             <code class="component-code dark">glow effect</code>
@@ -1202,53 +1262,55 @@
             <div class="mode-section light">
                 <span class="mode-badge light">Light Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products — AI-Ready Agents, DFlow
                     </h3>
                     <div class="component-grid">
                         <!-- Tabs -->
                         <div class="component-card light">
                             <div class="demo-tabs light">
-                                <div class="demo-tab active" style="background: var(--orange);">Overview</div>
+                                <div class="demo-tab active" style="background: var(--lime); color: var(--dark-navy);">
+                                    Overview</div>
                                 <div class="demo-tab light">Settings</div>
                                 <div class="demo-tab light">Logs</div>
                             </div>
                             <p class="component-label light">Tab Navigation</p>
-                            <code class="component-code light">active: #F3903F</code>
+                            <code class="component-code light">active: #A9CB2E</code>
                         </div>
                         <!-- Pagination -->
                         <div class="component-card light">
                             <div class="demo-pagination">
                                 <div class="demo-page light">‹</div>
                                 <div class="demo-page light">1</div>
-                                <div class="demo-page active" style="background: var(--orange);">2</div>
+                                <div class="demo-page active" style="background: var(--lime); color: var(--dark-navy);">
+                                    2</div>
                                 <div class="demo-page light">3</div>
                                 <div class="demo-page light">›</div>
                             </div>
                             <p class="component-label light">Pagination</p>
-                            <code class="component-code light">active: #F3903F</code>
+                            <code class="component-code light">active: #A9CB2E</code>
                         </div>
                         <!-- Breadcrumb -->
                         <div class="component-card light">
                             <div class="demo-breadcrumb">
-                                <a href="#" style="color: var(--orange); text-decoration: none;">Home</a>
+                                <a href="#" style="color: #7FA31E; text-decoration: none;">Home</a>
                                 <span class="breadcrumb-separator">/</span>
-                                <a href="#" style="color: var(--orange); text-decoration: none;">Products</a>
+                                <a href="#" style="color: #7FA31E; text-decoration: none;">Products</a>
                                 <span class="breadcrumb-separator">/</span>
                                 <span style="color: var(--slate);">AI Agents</span>
                             </div>
                             <p class="component-label light">Breadcrumb</p>
-                            <code class="component-code light">link: #F3903F</code>
+                            <code class="component-code light">link: #7FA31E</code>
                         </div>
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: #7FA31E;">
+                    <h3 class="layer-title" style="color: var(--orange);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products — Softnix GenAI, Softnix Logger
                     </h3>
@@ -1256,7 +1318,8 @@
                         <!-- Tabs Gradient -->
                         <div class="component-card light">
                             <div class="demo-tabs light">
-                                <div class="demo-tab active" style="background: var(--gradient-l2); color: var(--dark-navy);">Overview</div>
+                                <div class="demo-tab active" style="background: var(--gradient-l2); color: white;">
+                                    Overview</div>
                                 <div class="demo-tab light">Settings</div>
                                 <div class="demo-tab light">Logs</div>
                             </div>
@@ -1268,7 +1331,8 @@
                             <div class="demo-pagination">
                                 <div class="demo-page light">‹</div>
                                 <div class="demo-page light">1</div>
-                                <div class="demo-page active" style="background: var(--gradient-l2); color: var(--dark-navy);">2</div>
+                                <div class="demo-page active" style="background: var(--gradient-l2); color: white;">2
+                                </div>
                                 <div class="demo-page light">3</div>
                                 <div class="demo-page light">›</div>
                             </div>
@@ -1278,14 +1342,14 @@
                         <!-- Breadcrumb -->
                         <div class="component-card light">
                             <div class="demo-breadcrumb">
-                                <a href="#" style="color: #7FA31E; text-decoration: none;">Home</a>
+                                <a href="#" style="color: var(--orange); text-decoration: none;">Home</a>
                                 <span class="breadcrumb-separator">/</span>
-                                <a href="#" style="color: #7FA31E; text-decoration: none;">Products</a>
+                                <a href="#" style="color: var(--orange); text-decoration: none;">Products</a>
                                 <span class="breadcrumb-separator">/</span>
                                 <span style="color: var(--slate);">GenAI</span>
                             </div>
                             <p class="component-label light">Breadcrumb</p>
-                            <code class="component-code light">link: #7FA31E</code>
+                            <code class="component-code light">link: #F3903F</code>
                         </div>
                     </div>
                 </div>
@@ -1339,53 +1403,55 @@
             <div class="mode-section dark">
                 <span class="mode-badge dark">Dark Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange-light);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products
                     </h3>
                     <div class="component-grid">
                         <!-- Tabs -->
                         <div class="component-card dark">
                             <div class="demo-tabs dark">
-                                <div class="demo-tab active" style="background: var(--orange);">Overview</div>
+                                <div class="demo-tab active" style="background: var(--lime); color: var(--dark-navy);">
+                                    Overview</div>
                                 <div class="demo-tab dark">Settings</div>
                                 <div class="demo-tab dark">Logs</div>
                             </div>
                             <p class="component-label dark">Tab Navigation</p>
-                            <code class="component-code dark">active: #F3903F</code>
+                            <code class="component-code dark">active: #A9CB2E</code>
                         </div>
                         <!-- Pagination -->
                         <div class="component-card dark">
                             <div class="demo-pagination">
                                 <div class="demo-page dark">‹</div>
                                 <div class="demo-page dark">1</div>
-                                <div class="demo-page active" style="background: var(--orange);">2</div>
+                                <div class="demo-page active" style="background: var(--lime); color: var(--dark-navy);">
+                                    2</div>
                                 <div class="demo-page dark">3</div>
                                 <div class="demo-page dark">›</div>
                             </div>
                             <p class="component-label dark">Pagination</p>
-                            <code class="component-code dark">active: #F3903F</code>
+                            <code class="component-code dark">active: #A9CB2E</code>
                         </div>
                         <!-- Breadcrumb -->
                         <div class="component-card dark">
                             <div class="demo-breadcrumb">
-                                <a href="#" style="color: var(--orange-light); text-decoration: none;">Home</a>
+                                <a href="#" style="color: var(--lime-light); text-decoration: none;">Home</a>
                                 <span class="breadcrumb-separator">/</span>
-                                <a href="#" style="color: var(--orange-light); text-decoration: none;">Products</a>
+                                <a href="#" style="color: var(--lime-light); text-decoration: none;">Products</a>
                                 <span class="breadcrumb-separator">/</span>
                                 <span style="color: var(--light-slate);">AI Agents</span>
                             </div>
                             <p class="component-label dark">Breadcrumb (Lighter)</p>
-                            <code class="component-code dark">link: #F9B77A</code>
+                            <code class="component-code dark">link: #C4DD6B</code>
                         </div>
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--lime-light);">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products
                     </h3>
@@ -1393,7 +1459,8 @@
                         <!-- Tabs Gradient -->
                         <div class="component-card dark">
                             <div class="demo-tabs dark">
-                                <div class="demo-tab active" style="background: var(--gradient-l2); color: var(--dark-navy);">Overview</div>
+                                <div class="demo-tab active" style="background: var(--gradient-l2); color: white;">
+                                    Overview</div>
                                 <div class="demo-tab dark">Settings</div>
                             </div>
                             <p class="component-label dark">Tab (Gradient)</p>
@@ -1403,7 +1470,8 @@
                         <div class="component-card dark">
                             <div class="demo-pagination">
                                 <div class="demo-page dark">‹</div>
-                                <div class="demo-page active" style="background: var(--gradient-l2); color: var(--dark-navy);">2</div>
+                                <div class="demo-page active" style="background: var(--gradient-l2); color: white;">2
+                                </div>
                                 <div class="demo-page dark">›</div>
                             </div>
                             <p class="component-label dark">Pagination (Gradient)</p>
@@ -1454,90 +1522,69 @@
             <div class="mode-section light">
                 <span class="mode-badge light">Light Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: #7FA31E;">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products — AI-Ready Agents, DFlow
                     </h3>
                     <div class="component-grid">
                         <!-- Avatar -->
                         <div class="component-card light">
-                            <div class="demo-avatar-wrapper">
-                                <div class="demo-avatar" style="background: var(--orange);">
-                                    JD
-                                    <div class="avatar-status light" style="background: var(--success);"></div>
-                                </div>
-                                <div style="text-align: left;">
-                                    <div style="font-weight: 600; color: var(--dark-navy);">John Doe</div>
-                                    <div style="font-size: 0.85rem; color: var(--slate);">Online</div>
-                                </div>
-                            </div>
-                            <p class="component-label light">Avatar with Status</p>
-                            <code class="component-code light">bg: #F3903F</code>
+                            <div class="demo-avatar" style="background: var(--lime); color: var(--dark-navy);">TR</div>
+                            <p class="component-label light">Avatar</p>
+                            <code class="component-code light">bg: #A9CB2E</code>
                         </div>
-                        <!-- Chip Removable -->
+                        <!-- Chip -->
                         <div class="component-card light">
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                                <div class="demo-chip" style="background: rgba(243,144,63,0.15); color: var(--orange);">
-                                    AI Agent
-                                    <div class="chip-close" style="background: rgba(243,144,63,0.2);">×</div>
-                                </div>
-                                <div class="demo-chip" style="background: rgba(243,144,63,0.15); color: var(--orange);">
-                                    DFlow
-                                    <div class="chip-close" style="background: rgba(243,144,63,0.2);">×</div>
-                                </div>
+                            <div class="demo-chip" style="background: rgba(169,203,46,0.15); color: #7FA31E;">
+                                AI Agent
+                                <span class="chip-close">×</span>
                             </div>
-                            <p class="component-label light">Removable Chips</p>
-                            <code class="component-code light">bg: rgba(243,144,63,0.15)</code>
+                            <p class="component-label light">Chip</p>
+                            <code class="component-code light">bg: rgba(169,203,46,0.15)</code>
                         </div>
-                        <!-- Badge Notification -->
+                        <!-- Badge -->
                         <div class="component-card light">
-                            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
-                                <div style="position: relative; display: inline-block;">
-                                    <svg width="28" height="28" fill="var(--slate)" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
-                                    <span style="position: absolute; top: -5px; right: -5px; background: var(--orange); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 10px; font-weight: 600;">3</span>
-                                </div>
-                                <span style="color: var(--slate); font-size: 0.9rem;">Notification Badge</span>
+                            <div style="position: relative; display: inline-block;">
+                                <div style="width: 40px; height: 40px; background: #e0e0e0; border-radius: 8px;"></div>
+                                <span class="demo-badge"
+                                    style="background: var(--lime); color: var(--dark-navy);">3</span>
                             </div>
-                            <p class="component-label light">Badge Notification</p>
-                            <code class="component-code light">bg: #F3903F</code>
+                            <p class="component-label light">Notification Badge</p>
+                            <code class="component-code light">bg: #A9CB2E</code>
                         </div>
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: #7FA31E;">
+                    <h3 class="layer-title" style="color: var(--orange);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products — Softnix GenAI, Softnix Logger
                     </h3>
                     <div class="component-grid">
-                        <!-- Avatar Gradient -->
-                        <div class="component-card light">
-                            <div class="demo-avatar-wrapper">
-                                <div class="demo-avatar" style="background: var(--gradient-l2); color: var(--dark-navy);">
-                                    AI
-                                    <div class="avatar-status light" style="background: var(--success);"></div>
-                                </div>
-                                <div style="text-align: left;">
-                                    <div style="font-weight: 600; color: var(--dark-navy);">GenAI Bot</div>
-                                    <div style="font-size: 0.85rem; color: var(--slate);">Active</div>
-                                </div>
-                            </div>
-                            <p class="component-label light">Avatar (Gradient)</p>
-                            <code class="component-code light">bg: gradient</code>
-                        </div>
                         <!-- Chip Gradient -->
                         <div class="component-card light">
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                                <div class="demo-chip" style="background: linear-gradient(90deg, rgba(253,199,12,0.15), rgba(169,203,46,0.15)); color: #7FA31E;">
-                                    GenAI
-                                    <div class="chip-close" style="background: rgba(169,203,46,0.2);">×</div>
-                                </div>
+                            <div class="demo-chip"
+                                style="background: rgba(243,144,63,0.1); color: var(--orange); border: 1px solid rgba(243,144,63,0.3);">
+                                <span
+                                    style="background: var(--gradient-l2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">GenAI
+                                    Model</span>
+                                <span class="chip-close" style="color: var(--slate);">×</span>
                             </div>
-                            <p class="component-label light">Chip (Gradient BG)</p>
-                            <code class="component-code light">bg: gradient 15%</code>
+                            <p class="component-label light">Chip (Orange)</p>
+                            <code class="component-code light">border: #F3903F</code>
+                        </div>
+                        <!-- Badge Gradient -->
+                        <div class="component-card light">
+                            <div style="position: relative; display: inline-block;">
+                                <div style="width: 40px; height: 40px; background: #e0e0e0; border-radius: 8px;"></div>
+                                <span class="demo-badge"
+                                    style="background: var(--gradient-l2); color: white;">New</span>
+                            </div>
+                            <p class="component-label light">Badge (Gradient)</p>
+                            <code class="component-code light">bg: gradient</code>
                         </div>
                     </div>
                 </div>
@@ -1583,72 +1630,74 @@
             <div class="mode-section dark">
                 <span class="mode-badge dark">Dark Mode</span>
 
-                <!-- Layer 3 - Orange -->
+                <!-- Layer 3 - Yellow-Lime -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--orange-light);">
-                        <span class="layer-color-box" style="background: var(--orange);"></span>
+                    <h3 class="layer-title" style="color: var(--lime-light);">
+                        <span class="layer-color-box gradient" style="background: var(--gradient-l3);"></span>
                         Layer 3 Products
                     </h3>
                     <div class="component-grid">
                         <!-- Avatar -->
                         <div class="component-card dark">
-                            <div class="demo-avatar-wrapper">
-                                <div class="demo-avatar" style="background: var(--orange);">
-                                    JD
-                                    <div class="avatar-status dark" style="background: var(--success);"></div>
-                                </div>
-                                <div style="text-align: left;">
-                                    <div style="font-weight: 600; color: white;">John Doe</div>
-                                    <div style="font-size: 0.85rem; color: var(--light-slate);">Online</div>
-                                </div>
-                            </div>
-                            <p class="component-label dark">Avatar with Status</p>
-                            <code class="component-code dark">bg: #F3903F</code>
+                            <div class="demo-avatar" style="background: var(--lime); color: var(--dark-navy);">TR</div>
+                            <p class="component-label dark">Avatar</p>
+                            <code class="component-code dark">bg: #A9CB2E</code>
                         </div>
                         <!-- Chip -->
                         <div class="component-card dark">
-                            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                                <div class="demo-chip" style="background: rgba(243,144,63,0.2); color: var(--orange-light); border: 1px solid rgba(243,144,63,0.3);">
-                                    AI Agent
-                                    <div class="chip-close" style="background: rgba(243,144,63,0.3);">×</div>
-                                </div>
+                            <div class="demo-chip"
+                                style="background: rgba(169,203,46,0.15); color: var(--lime-light); border: 1px solid rgba(169,203,46,0.3);">
+                                AI Agent
+                                <span class="chip-close">×</span>
                             </div>
-                            <p class="component-label dark">Removable Chip</p>
-                            <code class="component-code dark">bg: rgba(243,144,63,0.2)</code>
+                            <p class="component-label dark">Chip</p>
+                            <code class="component-code dark">bg: rgba(169,203,46,0.15)</code>
+                        </div>
+                        <!-- Badge -->
+                        <div class="component-card dark">
+                            <div style="position: relative; display: inline-block;">
+                                <div
+                                    style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                                </div>
+                                <span class="demo-badge"
+                                    style="background: var(--lime); color: var(--dark-navy);">3</span>
+                            </div>
+                            <p class="component-label dark">Notification Badge</p>
+                            <code class="component-code dark">bg: #A9CB2E</code>
                         </div>
                     </div>
                 </div>
 
-                <!-- Layer 2 - Gradient -->
+                <!-- Layer 2 - Orange -->
                 <div class="layer-section">
-                    <h3 class="layer-title" style="color: var(--lime-light);">
+                    <h3 class="layer-title" style="color: var(--orange-light);">
                         <span class="layer-color-box gradient" style="background: var(--gradient-l2);"></span>
                         Layer 2 Products
                     </h3>
                     <div class="component-grid">
-                        <!-- Avatar Gradient -->
-                        <div class="component-card dark">
-                            <div class="demo-avatar-wrapper">
-                                <div class="demo-avatar" style="background: var(--gradient-l2); color: var(--dark-navy);">
-                                    AI
-                                    <div class="avatar-status dark" style="background: var(--success);"></div>
-                                </div>
-                                <div style="text-align: left;">
-                                    <div style="font-weight: 600; color: white;">GenAI Bot</div>
-                                    <div style="font-size: 0.85rem; color: var(--light-slate);">Active</div>
-                                </div>
-                            </div>
-                            <p class="component-label dark">Avatar (Gradient)</p>
-                            <code class="component-code dark">bg: gradient</code>
-                        </div>
                         <!-- Chip Gradient -->
                         <div class="component-card dark">
-                            <div class="demo-chip" style="background: linear-gradient(90deg, rgba(253,199,12,0.2), rgba(169,203,46,0.2)); color: var(--lime-light); border: 1px solid rgba(169,203,46,0.3);">
-                                GenAI
-                                <div class="chip-close" style="background: rgba(169,203,46,0.3);">×</div>
+                            <div class="demo-chip"
+                                style="background: rgba(243,144,63,0.1); color: var(--orange-light); border: 1px solid rgba(243,144,63,0.3);">
+                                <span
+                                    style="background: var(--gradient-l2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">GenAI
+                                    Model</span>
+                                <span class="chip-close" style="color: var(--light-slate);">×</span>
                             </div>
-                            <p class="component-label dark">Chip (Gradient)</p>
-                            <code class="component-code dark">bg: gradient 20%</code>
+                            <p class="component-label dark">Chip (Orange)</p>
+                            <code class="component-code dark">border: #F3903F</code>
+                        </div>
+                        <!-- Badge Gradient -->
+                        <div class="component-card dark">
+                            <div style="position: relative; display: inline-block;">
+                                <div
+                                    style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                                </div>
+                                <span class="demo-badge"
+                                    style="background: var(--gradient-l2); color: white;">New</span>
+                            </div>
+                            <p class="component-label dark">Badge (Gradient)</p>
+                            <code class="component-code dark">bg: gradient</code>
                         </div>
                     </div>
                 </div>
@@ -1675,7 +1724,8 @@
                         </div>
                         <!-- Chip Blue -->
                         <div class="component-card dark">
-                            <div class="demo-chip" style="background: rgba(39,134,194,0.2); color: var(--blue-light); border: 1px solid rgba(39,134,194,0.3);">
+                            <div class="demo-chip"
+                                style="background: rgba(39,134,194,0.2); color: var(--blue-light); border: 1px solid rgba(39,134,194,0.3);">
                                 Data Source
                                 <div class="chip-close" style="background: rgba(39,134,194,0.3);">×</div>
                             </div>
@@ -1695,7 +1745,9 @@
             <p class="section-subtitle">แนวทางการใช้สีสำหรับ Component States ต่างๆ</p>
 
             <div class="mode-section light">
-                <h4 style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 25px; color: var(--dark-navy);">Component States — Quick Reference</h4>
+                <h4
+                    style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin-bottom: 25px; color: var(--dark-navy);">
+                    Component States — Quick Reference</h4>
 
                 <div style="overflow-x: auto;">
                     <table class="states-table">
@@ -1749,26 +1801,36 @@
                 </div>
 
                 <!-- Pro Tips -->
-                <div class="pro-tips" style="background: linear-gradient(90deg, rgba(253,199,12,0.08), rgba(169,203,46,0.08)); border-left: 4px solid var(--lime);">
+                <div class="pro-tips"
+                    style="background: linear-gradient(90deg, rgba(253,199,12,0.08), rgba(169,203,46,0.08)); border-left: 4px solid var(--lime);">
                     <h4 style="color: var(--dark-navy);">Pro Tips for States</h4>
                     <ul style="color: var(--slate); font-size: 0.9rem;">
-                        <li><strong>Hover Transition:</strong> ใช้ <code>transition: all 0.2s ease;</code> สำหรับ smooth animation</li>
-                        <li><strong>Focus Ring:</strong> สำหรับ Accessibility ควรมี focus ring ที่ชัดเจน contrast ratio 3:1 ขึ้นไป</li>
-                        <li><strong>Disabled States:</strong> ไม่ควรใช้สีเทาอย่างเดียว ควร maintain brand color แต่ลด opacity</li>
-                        <li><strong>Dark Mode Hover:</strong> ใน Dark Mode ควรเพิ่ม brightness แทนที่จะลด เพราะ UI จะสว่างขึ้นเมื่อ interact</li>
+                        <li><strong>Hover Transition:</strong> ใช้ <code>transition: all 0.2s ease;</code> สำหรับ smooth
+                            animation</li>
+                        <li><strong>Focus Ring:</strong> สำหรับ Accessibility ควรมี focus ring ที่ชัดเจน contrast ratio
+                            3:1 ขึ้นไป</li>
+                        <li><strong>Disabled States:</strong> ไม่ควรใช้สีเทาอย่างเดียว ควร maintain brand color แต่ลด
+                            opacity</li>
+                        <li><strong>Dark Mode Hover:</strong> ใน Dark Mode ควรเพิ่ม brightness แทนที่จะลด เพราะ UI
+                            จะสว่างขึ้นเมื่อ interact</li>
                     </ul>
                 </div>
 
                 <!-- Color Opacity Reference -->
-                <div class="pro-tips" style="background: rgba(39,134,194,0.08); border-left: 4px solid var(--blue); margin-top: 20px;">
+                <div class="pro-tips"
+                    style="background: rgba(39,134,194,0.08); border-left: 4px solid var(--blue); margin-top: 20px;">
                     <h4 style="color: var(--dark-navy);">Opacity Reference (สำหรับ Background)</h4>
                     <ul style="color: var(--slate); font-size: 0.9rem;">
                         <li><strong>Light Mode Background:</strong> ใช้ opacity 10-15% ของ Primary color</li>
                         <li><strong>Dark Mode Background:</strong> ใช้ opacity 15-20% ของ Primary color</li>
                         <li><strong>Light Mode Border:</strong> ใช้ opacity 30% ของ Primary color</li>
                         <li><strong>Dark Mode Border:</strong> ใช้ opacity 30-40% ของ Primary color</li>
-                        <li><strong>Shadow (Light):</strong> <code>rgba(color, 0.2)</code> สำหรับ subtle, <code>rgba(color, 0.3)</code> สำหรับ prominent</li>
-                        <li><strong>Glow (Dark):</strong> <code>rgba(color, 0.3)</code> สำหรับ subtle, <code>rgba(color, 0.4)</code> สำหรับ prominent</li>
+                        <li><strong>Shadow (Light):</strong> <code>rgba(color, 0.2)</code> สำหรับ subtle,
+                            <code>rgba(color, 0.3)</code> สำหรับ prominent
+                        </li>
+                        <li><strong>Glow (Dark):</strong> <code>rgba(color, 0.3)</code> สำหรับ subtle,
+                            <code>rgba(color, 0.4)</code> สำหรับ prominent
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1780,4 +1842,5 @@
         <p>Softnix Brand Guidelines 2026 — <a href="softnix-brand-guidelines-2026.html">Back to Main Guidelines</a></p>
     </footer>
 </body>
+
 </html>
